@@ -1,23 +1,22 @@
 # Load in packages
-# install.packages("foreign")
-# install.packages("ggplot2")
-# install.packages("MASS")
+# install.packages("egg")
+# install.packages("multcompView")
+# install.packages("ggthemes")
+# install.packages("ggsignif")
 
 library(car)
 library(lme4)
-# library(lattice)
 library(reshape2)
-# library(rio)
-# library(writexl)
-# library(splitstackshape)
 library(readr)
 library(plotly)
 library(dplyr)
 library(emmeans)
-# library(foreign)
 library(ggplot2)
-# library(MASS)
-library(effects) # Needed for plotting of effects from Anova
+library(effects) 
+library(egg)
+library(multcompView)
+library(ggthemes) 
+library(ggsignif)
 
 ##### Set environment #####
 rm(list = ls()) # Clear environment
@@ -34,15 +33,15 @@ plotPrefix <- "/../figures/"
 
 ##### Loading data ##### 
 # Reading in data
-data <- read_delim("../loc_data/data_SF.txt")
+data <- read_delim("data_SF.txt")
 data$tDCSGroup[data$tDCSGroup == 'Active '] = 'Active'
 data$tDCSGroup[data$tDCSGroup == 'Sham '] = 'Sham'
 # Remove unnecessary columns
 data = subset(data, select = -c(PTQ_Total:SERI_Acceptance, PASA_Threat:PASA_StressIndex)) #removing unnecessary columns
-data <- na.omit(data) #removing data containing NA's
 
 # Removing the last two phases (and all related data)
 data = data[data$Phase != "SART", ]
+data = data[data$Phase != "PassiveViewing", ]
 
 # Change factors to numeric or factor
 data$Subject<- as.factor(data$Subject)
@@ -50,9 +49,9 @@ data$AF_NegativeAffect<- as.numeric(data$AF_NegativeAffect)
 data$AF_ActivatingPositiveAffect<- as.numeric(data$AF_ActivatingPositiveAffect)
 data$AF_SoothingPositiveAffect<- as.numeric(data$AF_SoothingPositiveAffect)
 data$tDCSGroup<- as.factor(as.factor(data$tDCSGroup))
-data$Phase<- ordered(data$Phase, levels = c('Habituation', 'Breathing', 'Stress', 'PassiveViewing')) # Factorize (ordered) moment
+data$Phase<- ordered(data$Phase, levels = c('Habituation', 'Breathing', 'Stress')) # Factorize (ordered) moment
 data$Breathing_Condition<- as.factor(data$Breathing_Condition)
- 
+
 # Visualization
 hist(data$AF_NegativeAffect)
 hist(data$AF_ActivatingPositiveAffect)
@@ -60,24 +59,17 @@ hist(data$AF_SoothingPositiveAffect)
 
 
 ####### Stats #######
-# Stats: Negative Affect ######
+
+# 1) Negative Affect ######
 formula <- 'AF_NegativeAffect ~ Phase*tDCSGroup*Breathing_Condition + (1|Subject)' # Declare formula
 
 dataModel = data # Ensure correct data is taken
 rm(d0.1, d0.2, d0.3, tabel, chosenModel, emmeans0.1, emmeans0.2, emm0.1, figure) # Just to be sure you're not comparing former models for this comparison
 
 d0.1 <- lmer(formula,data=dataModel)
-d0.2 <- glmer(formula,data=dataModel, family = Gamma(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
-d0.3 <- glmer(formula,data=dataModel, family = inverse.gaussian(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
+# d0.2 <- glmer(formula,data=dataModel, family = Gamma(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
+# d0.3 <- glmer(formula,data=dataModel, family = inverse.gaussian(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
 
-# Model Selection
-# The following is what I would normally do, when choosing from three models. In this case, we couldn't do d0.2 and d0.3 because there are zeroes present. I will comment this segment, and show you how to use the code otherwise.
-# modelNames = c(d0.1,d0.2,d0.3)
-# tabel <- cbind(AIC(d0.1), AIC(d0.2), AIC(d0.3))
-# chosenModel = modelNames[which(tabel == min(tabel))] # Get model with lowest AIC
-
-# This is what we do when only d0.2 can be made:
-#    Indeed, you could also just use d0.1 directly in the Anova, but this makes it easier to copy and paste all your code throughout. 
 modelNames = c(d0.1)
 tabel <- cbind(AIC(d0.1))
 chosenModel = modelNames[which(tabel == min(tabel))] # Get model with lowest AIC
@@ -85,82 +77,100 @@ chosenModel = modelNames[which(tabel == min(tabel))] # Get model with lowest AIC
 Anova(chosenModel[[1]], type = 'III')
 plot(effect("Phase:tDCSGroup:Breathing_Condition", chosenModel[[1]])) # Visualize the three way interaction we are interested in
 
-######### This is where I end now #############
-# Do the same, and follow the same structure as here, for all the different variables. 
-# Then you will have significance for each of the effects of interest. 
-# And also already some rough visualisations
+emmeans(chosenModel[[1]], pairwise ~ Phase, adjust ="fdr", type = "response") # Pairwise comparisons
 
-# Next steps will be:
-#    1) pairwise comparisons with emmeans
-#    2) decent visualisations, custom made for this cause, also showing significance!
+# 2) AF_ActivatingPositiveAffect ######
+formula <- 'AF_ActivatingPositiveAffect ~ Phase*tDCSGroup*Breathing_Condition + (1|Subject)' # Declare formula
 
+dataModel = data # Ensure correct data is taken
+rm(d0.1, d0.2, d0.3, tabel, chosenModel, emmeans0.1, emmeans0.2, emm0.1, figure) # Just to be sure you're not comparing former models for this comparison
 
-########### Under here is your code #############
-# Testing
+d0.1 <- lmer(formula,data=dataModel)
+# d0.2 <- glmer(formula,data=dataModel, family = Gamma(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
+# d0.3 <- glmer(formula,data=dataModel, family = inverse.gaussian(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
 
-# 1) NegativeAffect
+modelNames = c(d0.1)
+tabel <- cbind(AIC(d0.1))
+chosenModel = modelNames[which(tabel == min(tabel))] # Get model with lowest AIC
 
-test1A <- glmer(AF_NegativeAffect ~ Phase + (1|Subject), data=data) #Linear Mixed Model 
-summary(test1A)
+Anova(chosenModel[[1]], type = 'III')
+plot(effect("Phase:tDCSGroup:Breathing_Condition", chosenModel[[1]])) # Visualize the three way interaction we are interested in
 
-test1B <- glmer(AF_NegativeAffect ~ Phase + tDCSGroup + Breathing_Condition + (1|Subject),data=data) #Linear Mixed Model with extra predictors
-summary(test1B)
+emmeans(chosenModel[[1]], pairwise ~ Phase, adjust ="fdr", type = "response") # Pairwise comparisons
 
-test1C <- glm.nb(AF_NegativeAffect ~ Phase, data = data) #Negative Binomial 
-summary(test1C)
+# 3) AF_SoothingPositiveAffect ######
+formula <- 'AF_SoothingPositiveAffect ~ Phase*tDCSGroup*Breathing_Condition + (1|Subject)' # Declare formula
 
-test1D <- glm.nb(AF_NegativeAffect ~ Phase + tDCSGroup + Breathing_Condition, data = data) #Negative Binomial with extra predictors
-summary(test1D)
+dataModel = data # Ensure correct data is taken
+rm(d0.1, d0.2, d0.3, tabel, chosenModel, emmeans0.1, emmeans0.2, emm0.1, figure) # Just to be sure you're not comparing former models for this comparison
 
-AIC(test1A)
-AIC(test1B)
-AIC(test1C)
-AIC(test1D)
+d0.1 <- lmer(formula,data=dataModel)
+# d0.2 <- glmer(formula,data=dataModel, family = Gamma(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
+# d0.3 <- glmer(formula,data=dataModel, family = inverse.gaussian(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
 
-Anova(test1D, type= "III") #anova with the best model (lowest AIC)
+modelNames = c(d0.1)
+tabel <- cbind(AIC(d0.1))
+chosenModel = modelNames[which(tabel == min(tabel))] # Get model with lowest AIC
 
-# 2) ActivatingPositiveAffect
+Anova(chosenModel[[1]], type = 'III')
+plot(effect("Phase:tDCSGroup:Breathing_Condition", chosenModel[[1]])) # Visualize the three way interaction we are interested in
 
-test1A <- glmer(AF_ActivatingPositiveAffect ~ Phase + (1|Subject), data=data) #Linear Mixed Model 
-summary(test1A)
-
-test1B <- glmer(AF_ActivatingPositiveAffect ~ Phase + tDCSGroup + Breathing_Condition + (1|Subject),data=data) #Linear Mixed Model with extra predictors
-summary(test1B)
-
-test1C <- glm.nb(AF_ActivatingPositiveAffect ~ Phase, data = data) #Negative Binomial 
-summary(test1C)
-
-test1D <- glm.nb(AF_ActivatingPositiveAffect ~ Phase + tDCSGroup + Breathing_Condition, data = data) #Negative Binomial with extra predictors
-summary(test1D)
-
-AIC(test1A)
-AIC(test1B)
-AIC(test1C)
-AIC(test1D)
-
-Anova(test1B, type= "III") #anova with the best model (lowest AIC)
-
-# 3) SoothingPositiveAffect
-
-test1A <- glmer(AF_SoothingPositiveAffect ~ Phase + (1|Subject), data=data) #Linear Mixed Model 
-summary(test1A)
-
-test1B <- glmer(AF_SoothingPositiveAffect ~ Phase + tDCSGroup + Breathing_Condition + (1|Subject),data=data) #Linear Mixed Model with extra predictors
-summary(test1B)
-
-test1C <- glm.nb(AF_SoothingPositiveAffect ~ Phase, data = data) #Negative Binomial 
-summary(test1C)
-
-test1D <- glm.nb(AF_SoothingPositiveAffect ~ Phase + tDCSGroup + Breathing_Condition, data = data) #Negative Binomial with extra predictors
-summary(test1D)
-
-AIC(test1A)
-AIC(test1B)
-AIC(test1C)
-AIC(test1D)
-
-Anova(test1B, type= "III") #anova with the best model (lowest AIC)
+emmeans(chosenModel[[1]], pairwise ~ Phase, adjust ="fdr", type = "response")# Pairwise comparisons
 
 
+####### plots #######
 
+
+# 1) AF_NegativeAffect
+
+# Table with the mean and the standard deviation for every combination
+dt1 <- group_by(data, Phase, Breathing_Condition, tDCSGroup) %>%
+  summarise(NegAffect_mean=mean(AF_NegativeAffect), sd=sd(AF_NegativeAffect)) %>%
+  arrange(desc(NegAffect_mean))
+dt1
+
+# Barplot based on dt
+ggplot(dt1, aes(x = Phase, y = NegAffect_mean, fill = tDCSGroup:Breathing_Condition)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  # geom_errorbar(aes(ymax = NegAffect_mean + sd, ymin = NegAffect_mean - sd),
+  #               position = position_dodge(0.9), width = 0.25, color = "Gray25") + # Include errorbar
+  geom_signif(comparisons = list(c("Stress", "Breathing")), map_signif_level=T) +  # Include significance lines
+  geom_signif(comparisons = list(c("Habituation", "Stress")), map_signif_level=T) +  # Include significance lines
+  scale_fill_brewer(palette = "Greens") +
+  theme_few()
+
+# 2) AF_ActivatingPositiveAffect
+
+# Table with the mean and the standard deviation for every combination
+dt2 <- group_by(data, Phase, Breathing_Condition, tDCSGroup) %>%
+  summarise(APosAffect_mean=mean(AF_ActivatingPositiveAffect), sd=sd(AF_ActivatingPositiveAffect)) %>%
+  arrange(desc(APosAffect_mean))
+dt2
+
+# Barplot based on dt
+ggplot(dt2, aes(x = Phase, y = APosAffect_mean, fill = tDCSGroup:Breathing_Condition)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  # geom_errorbar(aes(ymax = APosAffect_mean + sd, ymin = APosAffect_mean - sd),
+  #               position = position_dodge(0.9), width = 0.25, color = "Gray25") + # Include errorbar
+ geom_signif(comparisons = list(c("Habituation", "Breathing")), map_signif_level=T) +  # Include significance lines
+  scale_fill_brewer(palette = "Greens") +
+  theme_few()
+
+# 3) AF_SoothingPositiveAffect
+
+# Table with the mean and the standard deviation for every combination
+dt3 <- group_by(data, Phase, Breathing_Condition, tDCSGroup) %>%
+  summarise(SPosAffect_mean=mean(AF_SoothingPositiveAffect), sd=sd(AF_SoothingPositiveAffect)) %>%
+  arrange(desc(SPosAffect_mean))
+dt3
+
+# Barplot based on dt
+ggplot(dt3, aes(x = Phase, y = SPosAffect_mean, fill = tDCSGroup:Breathing_Condition)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  # geom_errorbar(aes(ymax = SPosAffect_mean + sd, ymin = SPosAffect_mean - sd),
+  #               position = position_dodge(0.9), width = 0.25, color = "Gray25") + # Include errorbar
+  geom_signif(comparisons = list(c("Stress", "Breathing")), map_signif_level=T) +   # Include significance lines
+  geom_signif(comparisons = list(c("Habituation", "Stress")), map_signif_level=T) +  # Include significance lines
+  scale_fill_brewer(palette = "Greens") +
+  theme_few()
 

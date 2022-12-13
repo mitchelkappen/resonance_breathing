@@ -1,3 +1,14 @@
+##############################
+#                            #
+#  Self Report Analysis  V1  #
+#    Res. Breathing study    #
+#           x tDCS           #
+#                            #
+#############################
+# 
+# Author: Xander Cornelis & Mitchel Kappen 
+# 12-12-2022
+
 # Load in packages
 # install.packages("egg")
 # install.packages("multcompView")
@@ -33,7 +44,7 @@ plotPrefix <- "/../figures/"
 
 ##### Loading data ##### 
 # Reading in data
-data <- read_delim("data_SF.txt")
+data <- read_delim("../loc_data/data_SF.txt")
 data$tDCSGroup[data$tDCSGroup == 'Active '] = 'Active'
 data$tDCSGroup[data$tDCSGroup == 'Sham '] = 'Sham'
 # Remove unnecessary columns
@@ -53,10 +64,11 @@ data$Phase<- ordered(data$Phase, levels = c('Habituation', 'Breathing', 'Stress'
 data$Breathing_Condition<- as.factor(data$Breathing_Condition)
 
 # Visualization
-hist(data$AF_NegativeAffect)
-hist(data$AF_ActivatingPositiveAffect)
-hist(data$AF_SoothingPositiveAffect)
+densityPlot(data$AF_NegativeAffect)
+densityPlot(data$AF_ActivatingPositiveAffect)
+densityPlot(data$AF_SoothingPositiveAffect)
 
+summary(data) # I like to do this because it is easy to check the variable types
 
 ####### Stats #######
 

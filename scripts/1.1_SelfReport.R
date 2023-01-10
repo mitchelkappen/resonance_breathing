@@ -35,6 +35,7 @@ library(papaja)
 rm(list = ls()) # Clear environment
 cat("\014") # Clear console # # Or ctrl + l in VSCode
 dev.off() # Clear plot window
+pvalues = c() # Create a variable to store all p-values to correct later
 
 cbPalette <- c("#F0E442", "#0072B2", "#D55E00") # Define Colorblind proof plotting colors
 
@@ -50,9 +51,9 @@ plotPrefix <- "/../figures/"
 plotfunction <-
   function(emmean_dataframe, title){
     ggplot(emmean_dataframe, aes(x=Phase, y=emmean, colour = Breathing_Condition)) +
-      geom_point(aes(group = Breathing_Condition), size = 4) + 
-      geom_line(aes(group = Breathing_Condition),size = 1, colour = "black", linetype = "dotted")+
-      geom_errorbar(width=.25, size = 1, aes(ymin=emmean-SE, ymax=emmean+SE))+
+      geom_point(aes(group = Breathing_Condition), size = 4, position = position_dodge(width = 0.3)) + 
+      geom_line(aes(group = Breathing_Condition),size = 1, position = position_dodge(width = 0.3))+
+      geom_errorbar(width=.25, size = 1, aes(ymin=emmean-SE, ymax=emmean+SE), position = position_dodge(width = 0.3))+
       labs(y = title, x = "Phase")+
       scale_colour_manual(values=cbPalette)+
       theme_apa()
@@ -86,7 +87,7 @@ densityPlot(data$AF_NegativeAffect)
 densityPlot(data$AF_ActivatingPositiveAffect)
 densityPlot(data$AF_SoothingPositiveAffect)
 
-summary(data) # I like to do this because it is easy to check the variable types
+summary(data) 
 
 
 ####### Stats #######
@@ -106,15 +107,17 @@ chosenModel = modelNames[which(tabel == min(tabel))] # Get model with lowest AIC
 Anova(chosenModel[[1]], type = 'III')
 plot(effect("Phase:Breathing_Condition", chosenModel[[1]])) # Visualize the three way interaction we are interested in
 
-emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ Phase*Breathing_Condition, adjust ="fdr", type = "response") # Pairwise comparisons
+emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ Phase | Breathing_Condition, adjust ="none", type = "response") # Pairwise comparisons
 emm0.1 <- summary(emmeans0.1)$emmeans
 emmeans0.1$contrasts
+pvalues  = append(pvalues ,summary(emmeans0.1$contrasts)$p.value) # Store Pvalues to correct for multiple corrections later
 
+# Figure
 figure<- plotfunction(emm0.1, "Negative Affect")
 figure<- figure + annotate('text', x=1.5, y=mean(emm0.1$emmean) + (max(emm0.1$emmean) - min(emm0.1$emmean)) / 2, label='', size=7)
 figure<- figure + 
-  geom_signif(comparisons = list(c("Breathing", "Stress")), annotations="***",
-              y_position = 28, tip_length = 0.1, vjust=0.4, color = "black")
+  geom_text(x=1.4, y=18, label="***", colour = "#F0E442") + 
+  geom_text(x=1.4, y=16, label="***", colour = "#0072B2")
 figure 
 
 # 2) AF_ActivatingPositiveAffect ######
@@ -134,10 +137,12 @@ chosenModel = modelNames[which(tabel == min(tabel))] # Get model with lowest AIC
 Anova(chosenModel[[1]], type = 'III')
 plot(effect("Phase:Breathing_Condition", chosenModel[[1]])) # Visualize the three way interaction we are interested in
 
-emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ Phase*Breathing_Condition, adjust ="fdr", type = "response") # Pairwise comparisons
+emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ Phase | Breathing_Condition, adjust ="none", type = "response") # Pairwise comparisons
 emm0.1 <- summary(emmeans0.1)$emmeans
 emmeans0.1$contrasts
+pvalues  = append(pvalues ,summary(emmeans0.1$contrasts)$p.value) # Store Pvalues to correct for multiple corrections later
 
+# Figure
 figure<- plotfunction(emm0.1, "Activating Positive Affect")
 figure<- figure + annotate('text', x=1.5, y=mean(emm0.1$emmean) + (max(emm0.1$emmean) - min(emm0.1$emmean)) / 2, label='', size=7)
 figure
@@ -159,15 +164,24 @@ chosenModel = modelNames[which(tabel == min(tabel))] # Get model with lowest AIC
 Anova(chosenModel[[1]], type = 'III')
 plot(effect("Phase:Breathing_Condition", chosenModel[[1]])) # Visualize the three way interaction we are interested in
 
-emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ Phase*Breathing_Condition, adjust ="fdr", type = "response") # Pairwise comparisons
+emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ Phase | Breathing_Condition, adjust ="none", type = "response") # Pairwise comparisons
 emm0.1 <- summary(emmeans0.1)$emmeans
 emmeans0.1$contrasts
+pvalues  = append(pvalues ,summary(emmeans0.1$contrasts)$p.value) # Store Pvalues to correct for multiple corrections later
 
+# Figure
 figure<- plotfunction(emm0.1, "Soothing Positive Affect")
 figure<- figure + annotate('text', x=1.5, y=mean(emm0.1$emmean) + (max(emm0.1$emmean) - min(emm0.1$emmean)) / 2, label='', size=7)
 figure<- figure + 
-  geom_signif(comparisons = list(c("Breathing", "Stress")), annotations="***",
-              y_position = 85, tip_length = 0.1, vjust=0.4, color = "black")
-figure
+  geom_text(x=1.8, y= 73, label="***", colour = "#F0E442") + 
+  geom_text(x=1.8, y= 71, label="***", colour = "#0072B2")
+figure 
 
+
+# Correction for multiple comparisons ####
+
+names = c('Negative_Control', 'Negative_Slow', 'Positive Affect_Control', 'Positive Affect_Slow', 'Positive Soothing_Control', 'Positive Soothing_Slow')
+ps = list()
+ps[names] = p.adjust(pvalues, method = "fdr", length(pvalues)) # Create list containing fdr corrected pvalues
+ps
 

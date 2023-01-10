@@ -49,10 +49,10 @@ plotPrefix <- "/../figures/"
 # function for plot
 plotfunction <-
   function(emmean_dataframe, title){
-    ggplot(emmean_dataframe, aes(x=Phase, y=emmean, colour = Phase)) +
-      geom_point(size = 5) + 
-      geom_line(aes(group = 1),size = 1, colour = "black", linetype = "dotted")+
-      geom_errorbar(width=.25, size = 1.4, aes(ymin=emmean-SE, ymax=emmean+SE))+
+    ggplot(emmean_dataframe, aes(x=Phase, y=emmean, colour = Breathing_Condition)) +
+      geom_point(aes(group = Breathing_Condition), size = 4) + 
+      geom_line(aes(group = Breathing_Condition),size = 1, colour = "black", linetype = "dotted")+
+      geom_errorbar(width=.25, size = 1, aes(ymin=emmean-SE, ymax=emmean+SE))+
       labs(y = title, x = "Phase")+
       scale_colour_manual(values=cbPalette)+
       theme_apa()
@@ -66,15 +66,17 @@ data$tDCSGroup[data$tDCSGroup == 'Sham '] = 'Sham'
 # Remove unnecessary columns
 data = subset(data, select = -c(PTQ_Total:SERI_Acceptance, PASA_Threat:PASA_StressIndex)) #removing unnecessary columns
 
+# Removing active tDCS
+data = data[data$tDCSGroup != "Active", ]
+data = data[data$Phase != "Habituation", ]
+
 # Removing the last two phases (and all related data)
 data = data[data$Phase != "SART", ]
 data = data[data$Phase != "PassiveViewing", ]
 
 # Change factors to numeric or factor
 data$Subject<- as.factor(data$Subject)
-data$AF_NegativeAffect<- as.numeric(data$AF_NegativeAffect)
-data$AF_ActivatingPositiveAffect<- as.numeric(data$AF_ActivatingPositiveAffect)
-data$AF_SoothingPositiveAffect<- as.numeric(data$AF_SoothingPositiveAffect)
+
 data$tDCSGroup<- as.factor(as.factor(data$tDCSGroup))
 data$Phase<- ordered(data$Phase, levels = c('Habituation', 'Breathing', 'Stress')) # Factorize (ordered) moment
 data$Breathing_Condition<- as.factor(data$Breathing_Condition)
@@ -90,7 +92,7 @@ summary(data) # I like to do this because it is easy to check the variable types
 ####### Stats #######
 
 # 1) Negative Affect ######
-formula <- 'AF_NegativeAffect ~ Phase*tDCSGroup*Breathing_Condition + (1|Subject)' # Declare formula
+formula <- 'AF_NegativeAffect ~ Phase*Breathing_Condition + (1|Subject)' # Declare formula
 
 dataModel = data # Ensure correct data is taken
 rm(d0.1, d0.2, d0.3, tabel, chosenModel, emmeans0.1, emmeans0.2, emm0.1, figure) # Just to be sure you're not comparing former models for this comparison
@@ -102,18 +104,21 @@ tabel <- cbind(AIC(d0.1))
 chosenModel = modelNames[which(tabel == min(tabel))] # Get model with lowest AIC
 
 Anova(chosenModel[[1]], type = 'III')
-plot(effect("Phase:tDCSGroup:Breathing_Condition", chosenModel[[1]])) # Visualize the three way interaction we are interested in
+plot(effect("Phase:Breathing_Condition", chosenModel[[1]])) # Visualize the three way interaction we are interested in
 
-emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ Phase, adjust ="fdr", type = "response") # Pairwise comparisons
+emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ Phase*Breathing_Condition, adjust ="fdr", type = "response") # Pairwise comparisons
 emm0.1 <- summary(emmeans0.1)$emmeans
 emmeans0.1$contrasts
 
-NegAffectPlot<- plotfunction(emm0.1, "Negative Affect")
-NegAffectPlot<- NegAffectPlot + annotate('text', x=1.5, y=mean(emm0.1$emmean) + (max(emm0.1$emmean) - min(emm0.1$emmean)) / 2, label='', size=7)
-NegAffectPlot 
+figure<- plotfunction(emm0.1, "Negative Affect")
+figure<- figure + annotate('text', x=1.5, y=mean(emm0.1$emmean) + (max(emm0.1$emmean) - min(emm0.1$emmean)) / 2, label='', size=7)
+figure<- figure + 
+  geom_signif(comparisons = list(c("Breathing", "Stress")), annotations="***",
+              y_position = 28, tip_length = 0.1, vjust=0.4, color = "black")
+figure 
 
 # 2) AF_ActivatingPositiveAffect ######
-formula <- 'AF_ActivatingPositiveAffect ~ Phase*tDCSGroup*Breathing_Condition + (1|Subject)' # Declare formula
+formula <- 'AF_ActivatingPositiveAffect ~ Phase*Breathing_Condition + (1|Subject)' # Declare formula
 
 dataModel = data # Ensure correct data is taken
 rm(d0.1, d0.2, d0.3, tabel, chosenModel, emmeans0.1, emmeans0.2, emm0.1, figure) # Just to be sure you're not comparing former models for this comparison
@@ -127,18 +132,18 @@ tabel <- cbind(AIC(d0.1))
 chosenModel = modelNames[which(tabel == min(tabel))] # Get model with lowest AIC
 
 Anova(chosenModel[[1]], type = 'III')
-plot(effect("Phase:tDCSGroup:Breathing_Condition", chosenModel[[1]])) # Visualize the three way interaction we are interested in
+plot(effect("Phase:Breathing_Condition", chosenModel[[1]])) # Visualize the three way interaction we are interested in
 
-emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ Phase, adjust ="fdr", type = "response") # Pairwise comparisons
+emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ Phase*Breathing_Condition, adjust ="fdr", type = "response") # Pairwise comparisons
 emm0.1 <- summary(emmeans0.1)$emmeans
 emmeans0.1$contrasts
 
-ActPositivePlot<- plotfunction(emm0.1, "Activating Positive Affect")
-ActPositivePlot<- ActPositivePlot + annotate('text', x=1.5, y=mean(emm0.1$emmean) + (max(emm0.1$emmean) - min(emm0.1$emmean)) / 2, label='', size=7)
-ActPositivePlot
+figure<- plotfunction(emm0.1, "Activating Positive Affect")
+figure<- figure + annotate('text', x=1.5, y=mean(emm0.1$emmean) + (max(emm0.1$emmean) - min(emm0.1$emmean)) / 2, label='', size=7)
+figure
 
 # 3) AF_SoothingPositiveAffect ######
-formula <- 'AF_SoothingPositiveAffect ~ Phase*tDCSGroup*Breathing_Condition + (1|Subject)' # Declare formula
+formula <- 'AF_SoothingPositiveAffect ~ Phase*Breathing_Condition + (1|Subject)' # Declare formula
 
 dataModel = data # Ensure correct data is taken
 rm(d0.1, d0.2, d0.3, tabel, chosenModel, emmeans0.1, emmeans0.2, emm0.1, figure) # Just to be sure you're not comparing former models for this comparison
@@ -152,14 +157,17 @@ tabel <- cbind(AIC(d0.1))
 chosenModel = modelNames[which(tabel == min(tabel))] # Get model with lowest AIC
 
 Anova(chosenModel[[1]], type = 'III')
-plot(effect("Phase:tDCSGroup:Breathing_Condition", chosenModel[[1]])) # Visualize the three way interaction we are interested in
+plot(effect("Phase:Breathing_Condition", chosenModel[[1]])) # Visualize the three way interaction we are interested in
 
-emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ Phase, adjust ="fdr", type = "response") # Pairwise comparisons
+emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ Phase*Breathing_Condition, adjust ="fdr", type = "response") # Pairwise comparisons
 emm0.1 <- summary(emmeans0.1)$emmeans
 emmeans0.1$contrasts
 
-SootPositivePlot<- plotfunction(emm0.1, "Soothing Positive Affect")
-SootPositivePlot<- SootPositivePlot + annotate('text', x=1.5, y=mean(emm0.1$emmean) + (max(emm0.1$emmean) - min(emm0.1$emmean)) / 2, label='', size=7)
-SootPositivePlot
+figure<- plotfunction(emm0.1, "Soothing Positive Affect")
+figure<- figure + annotate('text', x=1.5, y=mean(emm0.1$emmean) + (max(emm0.1$emmean) - min(emm0.1$emmean)) / 2, label='', size=7)
+figure<- figure + 
+  geom_signif(comparisons = list(c("Breathing", "Stress")), annotations="***",
+              y_position = 85, tip_length = 0.1, vjust=0.4, color = "black")
+figure
 
 

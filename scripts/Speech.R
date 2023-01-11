@@ -39,6 +39,7 @@ plotfunction <-
 
 
 # Load in data ####
+data <- read_delim("data_SF.txt")
 audioData <- as.data.frame(read_parquet("df_gemaps_func (1).parquet"))
 
 # Factorize
@@ -66,7 +67,7 @@ for (i in 1:nrow(audioData)){
 }
 audioData$Breathing_Cond<- as.factor(audioData$Breathing_Cond)
 
-# Visualization
+# Visualization of the data
 densityPlot(audioData$F0semitoneFrom27.5Hz_sma3nz_amean)
 densityPlot(audioData$jitterLocal_sma3nz_amean)
 densityPlot(audioData$shimmerLocaldB_sma3nz_amean)

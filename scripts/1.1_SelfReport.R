@@ -34,7 +34,7 @@ library(papaja)
 ##### Set environment #####
 rm(list = ls()) # Clear environment
 cat("\014") # Clear console # # Or ctrl + l in VSCode
-dev.off() # Clear plot window
+#dev.off() # Clear plot window
 pvalues = c() # Create a variable to store all p-values to correct later
 
 cbPalette <- c("#F0E442", "#0072B2", "#D55E00") # Define Colorblind proof plotting colors
@@ -69,11 +69,11 @@ data = subset(data, select = -c(PTQ_Total:SERI_Acceptance, PASA_Threat:PASA_Stre
 
 # Removing active tDCS
 data = data[data$tDCSGroup != "Active", ]
-data = data[data$Phase != "Habituation", ]
 
-# Removing the last two phases (and all related data)
+# Removing the last two phases (and all related data) + habituation
 data = data[data$Phase != "SART", ]
 data = data[data$Phase != "PassiveViewing", ]
+data = data[data$Phase != "Habituation", ]
 
 # Change factors to numeric or factor
 data$Subject<- as.factor(data$Subject)
@@ -116,8 +116,8 @@ pvalues  = append(pvalues ,summary(emmeans0.1$contrasts)$p.value) # Store Pvalue
 figure<- plotfunction(emm0.1, "Negative Affect")
 figure<- figure + annotate('text', x=1.5, y=mean(emm0.1$emmean) + (max(emm0.1$emmean) - min(emm0.1$emmean)) / 2, label='', size=7)
 figure<- figure + 
-  geom_text(x=1.4, y=18, label="***", colour = "#F0E442") + 
-  geom_text(x=1.4, y=16, label="***", colour = "#0072B2")
+  geom_text(x=1.4, y=15, label="***", colour = "#F0E442") + 
+  geom_text(x=1.8, y=11, label="***", colour = "#0072B2")
 figure 
 
 # 2) AF_ActivatingPositiveAffect ######
@@ -173,8 +173,8 @@ pvalues  = append(pvalues ,summary(emmeans0.1$contrasts)$p.value) # Store Pvalue
 figure<- plotfunction(emm0.1, "Soothing Positive Affect")
 figure<- figure + annotate('text', x=1.5, y=mean(emm0.1$emmean) + (max(emm0.1$emmean) - min(emm0.1$emmean)) / 2, label='', size=7)
 figure<- figure + 
-  geom_text(x=1.8, y= 73, label="***", colour = "#F0E442") + 
-  geom_text(x=1.8, y= 71, label="***", colour = "#0072B2")
+  geom_text(x=1, y= 68, label="***", colour = "#F0E442") + 
+  geom_text(x=1.8, y= 70, label="***", colour = "#0072B2")
 figure 
 
 

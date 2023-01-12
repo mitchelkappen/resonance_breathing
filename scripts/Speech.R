@@ -39,8 +39,8 @@ plotfunction <-
 
 
 # Load in data ####
-data <- read_delim("data_SF.txt")
-audioData <- as.data.frame(read_parquet("df_gemaps_func (1).parquet"))
+data <- read_delim("../loc_data/Data_SF.txt")
+audioData <- as.data.frame(read_parquet("../loc_data/df_gemaps_func.parquet"))
 
 # Factorize
 audioData$participantNum = as.factor(audioData$participantNum)

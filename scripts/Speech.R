@@ -67,7 +67,6 @@ audioData$phaseName = as.factor(audioData$phaseName)
 # Removing the last two phases (and all related data) + habituation
 audioData = audioData[audioData$phaseName != "SART", ]
 audioData = audioData[audioData$phaseName != "PassiveViewing", ]
-audioData = audioData[audioData$phaseName != "Habituation", ]
 
 # Subset of columns
 audioData = subset(audioData, select = c(F0semitoneFrom27.5Hz_sma3nz_amean,
@@ -125,7 +124,7 @@ pvalues  = append(pvalues ,summary(emmeans0.1$contrasts)$p.value) # Store Pvalue
 figure<- plotfunction(emm0.1, "F0")
 figure<- figure + annotate('text', x=1.5, y=mean(emm0.1$emmean) + (max(emm0.1$emmean) - min(emm0.1$emmean)) / 2, label='', size=7)
 figure<- figure + 
-  geom_text(x=1.5, y=28.7, label="*", colour = "#0072B2")
+  geom_text(x=1.5, y=28.5, label="*", colour = "#0072B2")
 figure 
 
 
@@ -244,7 +243,7 @@ figure<- plotfunction(emm0.1, "MeanVoiced")
 figure<- figure + annotate('text', x=1.5, y=mean(emm0.1$emmean) + (max(emm0.1$emmean) - min(emm0.1$emmean)) / 2, label='', size=7)
 figure<- figure + 
    # geom_text(x=1.5, y=0.162, label="*", colour = "#F0E442") + 
-   geom_text(x=1.5, y=0.157, label="***", colour = "#0072B2")
+   geom_text(x=1.5, y=0.155, label="***", colour = "#0072B2")
 figure 
 
 

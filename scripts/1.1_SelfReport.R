@@ -141,6 +141,11 @@ dt1 <- group_by(data, Phase, Breathing_Condition, tDCSGroup) %>%
   arrange(desc(NegAffect_mean))
 dt1
 
+dt1 <- group_by(data, Phase) %>%
+  summarise(NegAffect_mean=mean(AF_NegativeAffect), sd=sd(AF_NegativeAffect)) %>%
+  arrange(desc(NegAffect_mean))
+dt1
+
 # Barplot based on dt
 ggplot(dt1, aes(x = Phase, y = NegAffect_mean, fill = tDCSGroup:Breathing_Condition)) +
   geom_bar(stat = "identity", position = "dodge") +

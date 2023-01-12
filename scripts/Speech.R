@@ -26,6 +26,24 @@ pvalues = c() # Create a variable to store all p-values to correct later
 cbPalette <- c("#F0E442", "#0072B2", "#D55E00") # Define Colorblind proof plotting colors
 
 # function for plot
+# One general theme to clean up code
+plot_theme_apa <-
+  function(...){
+    theme(
+      # legend.key.size=unit(1.3, 'cm'),
+      # legend.text=element_text(size=13),
+      legend.position = "none",
+      plot.title = element_text(size=rel(2)),
+      panel.border = element_blank(),
+      panel.background = element_blank(),
+      axis.line = element_line(colour = "black"),
+      panel.grid.major.y = element_line( size=.1, color="#dedede" ),
+      axis.text.x=element_text(size=rel(2)),
+      axis.title.y=element_text(size=rel(1.5)),
+      axis.title.x = element_text(size=rel(1.5)))
+  }
+
+
 plotfunction <-
   function(emmean_dataframe, title){
     ggplot(emmean_dataframe, aes(x=phaseName, y=emmean, colour = Breathing_Cond)) +
@@ -34,7 +52,7 @@ plotfunction <-
       geom_errorbar(width=.25, size = 1, aes(ymin=emmean-SE, ymax=emmean+SE), position = position_dodge(width = 0.3)) +
       labs(y = title, x = "Phase")+
       scale_colour_manual(values=cbPalette)+
-      theme_apa()
+      plot_theme_apa()
   }
 
 
@@ -63,7 +81,7 @@ audioData = subset(audioData, select = c(F0semitoneFrom27.5Hz_sma3nz_amean,
 # Add column with breathing condition
 audioData$Breathing_Cond<- 0
 for (i in 1:nrow(audioData)){
-  audioData$Breathing_Cond[i]<- data$Breathing_Condition[audioData$participantNum[i] == data$Subject] 
+  audioData$Breathing_Cond[i]<- data$Breathing_Condition[audioData$participantNum[i] == data$Subject][1]
 }
 audioData$Breathing_Cond<- as.factor(audioData$Breathing_Cond)
 
@@ -118,12 +136,12 @@ dataModel = audioData # Ensure correct data is taken
 rm(d0.1, d0.2, d0.3, tabel, chosenModel, emmeans0.1, emmeans0.2, emm0.1, figure) # Just to be sure you're not comparing former models for this comparison
 
 d0.1 <- lmer(formula,data=dataModel)
-d0.2 <- glmer(formula,data=dataModel, family = Gamma(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
-d0.3 <- glmer(formula,data=dataModel, family = inverse.gaussian(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
+# d0.2 <- glmer(formula,data=dataModel, family = Gamma(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
+# d0.3 <- glmer(formula,data=dataModel, family = inverse.gaussian(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
 
 # Model Selection
-modelNames = c(d0.1,d0.2,d0.3)
-tabel <- cbind(AIC(d0.1), AIC(d0.2), AIC(d0.3))
+modelNames = c(d0.1)
+tabel <- cbind(AIC(d0.1))
 chosenModel = modelNames[which(tabel == min(tabel))] # Get model with lowest AIC
 
 Anova(chosenModel[[1]], type = 'III')
@@ -176,8 +194,8 @@ dataModel = audioData # Ensure correct data is taken
 rm(d0.1, d0.2, d0.3, tabel, chosenModel, emmeans0.1, emmeans0.2, emm0.1, figure) # Just to be sure you're not comparing former models for this comparison
 
 d0.1 <- lmer(formula,data=dataModel)
-#d0.2 <- glmer(formula,data=dataModel, family = Gamma(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
-#d0.3 <- glmer(formula,data=dataModel, family = inverse.gaussian(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
+# d0.2 <- glmer(formula,data=dataModel, family = Gamma(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
+# d0.3 <- glmer(formula,data=dataModel, family = inverse.gaussian(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
 
 # Model Selection
 modelNames = c(d0.1)
@@ -205,12 +223,12 @@ dataModel = audioData # Ensure correct data is taken
 rm(d0.1, d0.2, d0.3, tabel, chosenModel, emmeans0.1, emmeans0.2, emm0.1, figure) # Just to be sure you're not comparing former models for this comparison
 
 d0.1 <- lmer(formula,data=dataModel)
-d0.2 <- glmer(formula,data=dataModel, family = Gamma(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
-d0.3 <- glmer(formula,data=dataModel, family = inverse.gaussian(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
+# d0.2 <- glmer(formula,data=dataModel, family = Gamma(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
+# d0.3 <- glmer(formula,data=dataModel, family = inverse.gaussian(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
 
 # Model Selection
-modelNames = c(d0.1,d0.2,d0.3)
-tabel <- cbind(AIC(d0.1), AIC(d0.2), AIC(d0.3))
+modelNames = c(d0.1)
+tabel <- cbind(AIC(d0.1))
 chosenModel = modelNames[which(tabel == min(tabel))] # Get model with lowest AIC
 
 Anova(chosenModel[[1]], type = 'III')
@@ -225,7 +243,7 @@ pvalues  = append(pvalues ,summary(emmeans0.1$contrasts)$p.value) # Store Pvalue
 figure<- plotfunction(emm0.1, "MeanVoiced")
 figure<- figure + annotate('text', x=1.5, y=mean(emm0.1$emmean) + (max(emm0.1$emmean) - min(emm0.1$emmean)) / 2, label='', size=7)
 figure<- figure + 
-   geom_text(x=1.5, y=0.162, label="*", colour = "#F0E442") + 
+   # geom_text(x=1.5, y=0.162, label="*", colour = "#F0E442") + 
    geom_text(x=1.5, y=0.157, label="***", colour = "#0072B2")
 figure 
 

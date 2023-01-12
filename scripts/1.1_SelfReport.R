@@ -178,7 +178,65 @@ figure<- figure +
 figure
 
 
+<<<<<<< HEAD
 # Correction for multiple comparisons ####
+=======
+####### plots #######
+
+
+# 1) AF_NegativeAffect
+
+# Table with the mean and the standard deviation for every combination
+dt1 <- group_by(data, Phase, Breathing_Condition, tDCSGroup) %>%
+  summarise(NegAffect_mean=mean(AF_NegativeAffect), sd=sd(AF_NegativeAffect)) %>%
+  arrange(desc(NegAffect_mean))
+dt1
+
+# Barplot based on dt
+ggplot(dt1, aes(x = Phase, y = NegAffect_mean, fill = tDCSGroup:Breathing_Condition)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  # geom_errorbar(aes(ymax = NegAffect_mean + sd, ymin = NegAffect_mean - sd),
+  #               position = position_dodge(0.9), width = 0.25, color = "Gray25") + # Include errorbar
+  geom_signif(comparisons = list(c("Stress", "Breathing")), map_signif_level=T) +  # Include significance lines
+  geom_signif(comparisons = list(c("Habituation", "Stress")), map_signif_level=T) +  # Include significance lines
+  scale_fill_brewer(palette = "Greens") +
+  theme_few()
+
+# 2) AF_ActivatingPositiveAffect
+
+# Table with the mean and the standard deviation for every combination
+dt2 <- group_by(data, Phase, Breathing_Condition, tDCSGroup) %>%
+  summarise(APosAffect_mean=mean(AF_ActivatingPositiveAffect), sd=sd(AF_ActivatingPositiveAffect)) %>%
+  arrange(desc(APosAffect_mean))
+dt2
+
+# Barplot based on dt
+ggplot(dt2, aes(x = Phase, y = APosAffect_mean, fill = tDCSGroup:Breathing_Condition)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  # geom_errorbar(aes(ymax = APosAffect_mean + sd, ymin = APosAffect_mean - sd),
+  #               position = position_dodge(0.9), width = 0.25, color = "Gray25") + # Include errorbar
+ geom_signif(comparisons = list(c("Habituation", "Breathing")), map_signif_level=T) +  # Include significance lines
+  scale_fill_brewer(palette = "Greens") +
+  theme_few()
+
+# 3) AF_SoothingPositiveAffect
+
+# Table with the mean and the standard deviation for every combination
+dt3 <- group_by(data, Phase, Breathing_Condition, tDCSGroup) %>%
+  summarise(SPosAffect_mean=mean(AF_SoothingPositiveAffect), sd=sd(AF_SoothingPositiveAffect)) %>%
+  arrange(desc(SPosAffect_mean))
+dt3
+
+# Barplot based on dt
+ggplot(dt3, aes(x = Phase, y = SPosAffect_mean, fill = tDCSGroup:Breathing_Condition)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  # geom_errorbar(aes(ymax = SPosAffect_mean + sd, ymin = SPosAffect_mean - sd),
+  #               position = position_dodge(0.9), width = 0.25, color = "Gray25") + # Include errorbar
+  geom_signif(comparisons = list(c("Stress", "Breathing")), map_signif_level=T) +   # Include significance lines
+  geom_signif(comparisons = list(c("Habituation", "Stress")), map_signif_level=T) +  # Include significance lines
+  scale_fill_brewer(palette = "Greens") +
+  theme_few()
+>>>>>>> parent of 280ae8b (gitignore)
 
 names = c('Negative_Control', 'Negative_Slow', 'Positive Affect_Control', 'Positive Affect_Slow', 'Positive Soothing_Control', 'Positive Soothing_Slow')
 ps = list()

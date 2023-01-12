@@ -62,9 +62,9 @@ audioData <- as.data.frame(read_parquet("../loc_data/df_gemaps_func.parquet"))
 
 # Factorize
 audioData$participantNum = as.factor(audioData$participantNum)
-audioData$phaseName = as.factor(audioData$phaseName)
+audioData$phaseName = factor(audioData$phaseName, levels = c("Habituation", "Breathing", "Calculus"))
 
-# Removing the last two phases (and all related data) + habituation
+# Removing the last two phases (and all related data) 
 audioData = audioData[audioData$phaseName != "SART", ]
 audioData = audioData[audioData$phaseName != "PassiveViewing", ]
 
@@ -123,8 +123,6 @@ pvalues  = append(pvalues ,summary(emmeans0.1$contrasts)$p.value) # Store Pvalue
 # Figure
 figure<- plotfunction(emm0.1, "F0")
 figure<- figure + annotate('text', x=1.5, y=mean(emm0.1$emmean) + (max(emm0.1$emmean) - min(emm0.1$emmean)) / 2, label='', size=7)
-figure<- figure + 
-  geom_text(x=1.5, y=28.5, label="*", colour = "#0072B2")
 figure 
 
 
@@ -183,7 +181,10 @@ pvalues  = append(pvalues ,summary(emmeans0.1$contrasts)$p.value) # Store Pvalue
 # Figure
 figure<- plotfunction(emm0.1, "Shimmer")
 figure<- figure + annotate('text', x=1.5, y=mean(emm0.1$emmean) + (max(emm0.1$emmean) - min(emm0.1$emmean)) / 2, label='', size=7)
-figure 
+figure<- figure + 
+  geom_text(x=1.5, y=1.185, label="*", colour = "#F0E442") + 
+  geom_text(x=1.5, y=1.215, label="*", colour = "#0072B2")
+figure  
 
 
 # 4) HNRdBACF_sma3nz_amean ####
@@ -242,8 +243,8 @@ pvalues  = append(pvalues ,summary(emmeans0.1$contrasts)$p.value) # Store Pvalue
 figure<- plotfunction(emm0.1, "MeanVoiced")
 figure<- figure + annotate('text', x=1.5, y=mean(emm0.1$emmean) + (max(emm0.1$emmean) - min(emm0.1$emmean)) / 2, label='', size=7)
 figure<- figure + 
-   # geom_text(x=1.5, y=0.162, label="*", colour = "#F0E442") + 
-   geom_text(x=1.5, y=0.155, label="***", colour = "#0072B2")
+   geom_text(x=1.65, y=0.153, label="*", colour = "#0072B2") + 
+   geom_text(x=2.45, y=0.153, label="*", colour = "#0072B2")
 figure 
 
 
@@ -277,10 +278,14 @@ figure
 
 
 # Correction for multiple comparisons ####
-names = c('F0_Control', 'F0_Slow', 'Jitter_Control', 'Jitter_Slow', 'Shimmer_Control', 'Shimmer_Slow', 'HNR_Control', 'HNR_Slow', 'MeanVoiced_Control', 'MeanVoiced_Slow', 'Voiced_Control', 'Voiced_Slow')
+names = c('F0_Control', 'F0_Control', 'F0_Control', 'F0_Slow', 'F0_Slow', 'F0_Slow', 
+          'Jitter_Control', 'Jitter_Control', 'Jitter_Control', 'Jitter_Slow',  'Jitter_Slow', 'Jitter_Slow', 
+          'Shimmer_Control', 'Shimmer_Control', 'Shimmer_Control', 'Shimmer_Slow', 'Shimmer_Slow', 'Shimmer_Slow', 
+          'HNR_Control', 'HNR_Control', 'HNR_Control', 'HNR_Slow', 'HNR_Slow', 'HNR_Slow', 
+          'MeanVoiced_Control', 'MeanVoiced_Control', 'MeanVoiced_Control', 'MeanVoiced_Slow', 'MeanVoiced_Slow', 'MeanVoiced_Slow', 
+          'Voiced_Control', 'Voiced_Control', 'Voiced_Control', 'Voiced_Slow', 'Voiced_Slow', 'Voiced_Slow')
 ps = list()
 ps[names] = p.adjust(pvalues, method = "fdr", length(pvalues)) # Create list containing fdr corrected pvalues
 ps
-
-
-
+pvalues
+p.adjust(pvalues, method = "fdr", length(pvalues))

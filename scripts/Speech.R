@@ -46,7 +46,7 @@ plot_theme_apa <-
 
 plotfunction <-
   function(emmean_dataframe, title){
-    ggplot(emmean_dataframe, aes(x=phaseName, y=emmean, colour = Breathing_Cond)) +
+    ggplot(emmean_dataframe, aes(x=taskType, y=emmean, colour = Breathing_Cond)) +
       geom_point(aes(group = Breathing_Cond), size = 4, position = position_dodge(width = 0.3)) + 
       geom_line(aes(group = Breathing_Cond), size = 1, position = position_dodge(width = 0.3)) +
       geom_errorbar(width=.25, size = 1, aes(ymin=emmean-SE, ymax=emmean+SE), position = position_dodge(width = 0.3)) +
@@ -58,31 +58,32 @@ plotfunction <-
 
 # Load in data ####
 data <- read_delim("../loc_data/Data_SF.txt")
-audioData <- as.data.frame(read_parquet("../loc_data/df_gemaps_func.parquet"))
+audioData <- as.data.frame(read_parquet("../loc_data/df_gemaps_func_16khz_noisy.parquet"))
+
+# Clean up
+audioData <- audioData %>% mutate(taskType = substring(taskType, 3)) # Rename taskType variables
+audioData <- audioData[audioData$taskType != "SART" & audioData$taskType != "PassiveViewing", ] # Kick out final two phases
 
 # Factorize
 audioData$participantNum = as.factor(audioData$participantNum)
-audioData$phaseName = factor(audioData$phaseName, levels = c("Habituation", "Breathing", "Calculus"))
-
-# Removing the last two phases (and all related data) 
-audioData = audioData[audioData$phaseName != "SART", ]
-audioData = audioData[audioData$phaseName != "PassiveViewing", ]
+audioData$taskType = factor(audioData$taskType, levels = c("Habituation", "Breathing", "Calculus"))
 
 # Subset of columns
+backupData = audioData
 audioData = subset(audioData, select = c(F0semitoneFrom27.5Hz_sma3nz_amean,
                                          jitterLocal_sma3nz_amean,
                                          shimmerLocaldB_sma3nz_amean,
                                          HNRdBACF_sma3nz_amean,
                                          MeanVoicedSegmentLengthSec,
                                          VoicedSegmentsPerSec,
-                                         participantNum, phaseName)) 
+                                         participantNum, taskType)) 
 
 # Add column with breathing condition
-audioData$Breathing_Cond<- 0
+audioData$Breathing_Cond <- 0
 for (i in 1:nrow(audioData)){
   audioData$Breathing_Cond[i]<- data$Breathing_Condition[audioData$participantNum[i] == data$Subject][1]
 }
-audioData$Breathing_Cond<- as.factor(audioData$Breathing_Cond)
+audioData$Breathing_Cond <- as.factor(audioData$Breathing_Cond)
 
 # Visualization of the data
 densityPlot(audioData$F0semitoneFrom27.5Hz_sma3nz_amean)
@@ -92,13 +93,10 @@ densityPlot(audioData$HNRdBACF_sma3nz_amean)
 densityPlot(audioData$MeanVoicedSegmentLengthSec)
 densityPlot(audioData$VoicedSegmentsPerSec)
 
-
-
-# testing #####
-
-
+# Statistics #####
+# Speech #####
 # 1) F0semitoneFrom27.5Hz_sma3nz_amean ####
-formula <- 'F0semitoneFrom27.5Hz_sma3nz_amean ~ phaseName*Breathing_Cond + (1|participantNum)' # Declare formula
+formula <- 'F0semitoneFrom27.5Hz_sma3nz_amean ~ taskType*Breathing_Cond + (1|participantNum)' # Declare formula
 
 dataModel = audioData # Ensure correct data is taken
 rm(d0.1, d0.2, d0.3, tabel, chosenModel, emmeans0.1, emmeans0.2, emm0.1, figure) # Just to be sure you're not comparing former models for this comparison
@@ -113,9 +111,10 @@ tabel <- cbind(AIC(d0.1), AIC(d0.2), AIC(d0.3))
 chosenModel = modelNames[which(tabel == min(tabel))] # Get model with lowest AIC
 
 Anova(chosenModel[[1]], type = 'III')
-plot(effect("phaseName:Breathing_Cond", chosenModel[[1]])) # Visualize the three way interaction we are interested in
+plot(effect("taskType:Breathing_Cond", chosenModel[[1]])) # Visualize the three way interaction we are interested in
+plot(effect("taskType", chosenModel[[1]])) # Visualize the three way interaction we are interested in
 
-emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ phaseName | Breathing_Cond, adjust ="none", type = "response") # Pairwise comparisons
+emmeans0.2<- emmeans(chosenModel[[1]], pairwise ~ taskType | Breathing_Cond, adjust ="none", type = "response") # Pairwise comparisons
 emm0.1 <- summary(emmeans0.1)$emmeans
 emmeans0.1$contrasts
 pvalues  = append(pvalues ,summary(emmeans0.1$contrasts)$p.value) # Store Pvalues to correct for multiple corrections later
@@ -126,8 +125,11 @@ figure<- figure + annotate('text', x=1.5, y=mean(emm0.1$emmean) + (max(emm0.1$em
 figure 
 
 
+emmeans0.3<- emmeans(chosenModel[[1]], pairwise ~ Breathing_Cond | taskType, adjust ="none", type = "response") # Pairwise comparisons
+
+
 # 2) jitterLocal_sma3nz_amean ####
-formula <- 'jitterLocal_sma3nz_amean ~ phaseName*Breathing_Cond + (1|participantNum)' # Declare formula
+formula <- 'jitterLocal_sma3nz_amean ~ taskType*Breathing_Cond + (1|participantNum)' # Declare formula
 
 dataModel = audioData # Ensure correct data is taken
 rm(d0.1, d0.2, d0.3, tabel, chosenModel, emmeans0.1, emmeans0.2, emm0.1, figure) # Just to be sure you're not comparing former models for this comparison
@@ -142,9 +144,9 @@ tabel <- cbind(AIC(d0.1))
 chosenModel = modelNames[which(tabel == min(tabel))] # Get model with lowest AIC
 
 Anova(chosenModel[[1]], type = 'III')
-plot(effect("phaseName:Breathing_Cond", chosenModel[[1]])) # Visualize the three way interaction we are interested in
+plot(effect("taskType:Breathing_Cond", chosenModel[[1]])) # Visualize the three way interaction we are interested in
 
-emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ phaseName | Breathing_Cond, adjust ="none", type = "response") # Pairwise comparisons
+emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ taskType | Breathing_Cond, adjust ="none", type = "response") # Pairwise comparisons
 emm0.1 <- summary(emmeans0.1)$emmeans
 emmeans0.1$contrasts
 pvalues  = append(pvalues ,summary(emmeans0.1$contrasts)$p.value) # Store Pvalues to correct for multiple corrections later
@@ -156,7 +158,7 @@ figure
 
 
 # 3) shimmerLocaldB_sma3nz_amean ####
-formula <- 'shimmerLocaldB_sma3nz_amean ~ phaseName*Breathing_Cond + (1|participantNum)' # Declare formula
+formula <- 'shimmerLocaldB_sma3nz_amean ~ taskType*Breathing_Cond + (1|participantNum)' # Declare formula
 
 dataModel = audioData # Ensure correct data is taken
 rm(d0.1, d0.2, d0.3, tabel, chosenModel, emmeans0.1, emmeans0.2, emm0.1, figure) # Just to be sure you're not comparing former models for this comparison
@@ -171,9 +173,9 @@ tabel <- cbind(AIC(d0.1), AIC(d0.2), AIC(d0.3))
 chosenModel = modelNames[which(tabel == min(tabel))] # Get model with lowest AIC
 
 Anova(chosenModel[[1]], type = 'III')
-plot(effect("phaseName:Breathing_Cond", chosenModel[[1]])) # Visualize the three way interaction we are interested in
+plot(effect("taskType:Breathing_Cond", chosenModel[[1]])) # Visualize the three way interaction we are interested in
 
-emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ phaseName | Breathing_Cond, adjust ="none", type = "response") # Pairwise comparisons
+emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ taskType | Breathing_Cond, adjust ="none", type = "response") # Pairwise comparisons
 emm0.1 <- summary(emmeans0.1)$emmeans
 emmeans0.1$contrasts
 pvalues  = append(pvalues ,summary(emmeans0.1$contrasts)$p.value) # Store Pvalues to correct for multiple corrections later
@@ -188,7 +190,7 @@ figure
 
 
 # 4) HNRdBACF_sma3nz_amean ####
-formula <- 'HNRdBACF_sma3nz_amean ~ phaseName*Breathing_Cond + (1|participantNum)' # Declare formula
+formula <- 'HNRdBACF_sma3nz_amean ~ taskType*Breathing_Cond + (1|participantNum)' # Declare formula
 
 dataModel = audioData # Ensure correct data is taken
 rm(d0.1, d0.2, d0.3, tabel, chosenModel, emmeans0.1, emmeans0.2, emm0.1, figure) # Just to be sure you're not comparing former models for this comparison
@@ -203,9 +205,9 @@ tabel <- cbind(AIC(d0.1))
 chosenModel = modelNames[which(tabel == min(tabel))] # Get model with lowest AIC
 
 Anova(chosenModel[[1]], type = 'III')
-plot(effect("phaseName:Breathing_Cond", chosenModel[[1]])) # Visualize the three way interaction we are interested in
+plot(effect("taskType:Breathing_Cond", chosenModel[[1]])) # Visualize the three way interaction we are interested in
 
-emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ phaseName | Breathing_Cond, adjust ="none", type = "response") # Pairwise comparisons
+emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ taskType | Breathing_Cond, adjust ="none", type = "response") # Pairwise comparisons
 emm0.1 <- summary(emmeans0.1)$emmeans
 emmeans0.1$contrasts
 pvalues  = append(pvalues ,summary(emmeans0.1$contrasts)$p.value) # Store Pvalues to correct for multiple corrections later
@@ -217,7 +219,7 @@ figure
 
 
 # 5) MeanVoicedSegmentLengthSec ####
-formula <- 'MeanVoicedSegmentLengthSec ~ phaseName*Breathing_Cond + (1|participantNum)' # Declare formula
+formula <- 'MeanVoicedSegmentLengthSec ~ taskType*Breathing_Cond + (1|participantNum)' # Declare formula
 
 dataModel = audioData # Ensure correct data is taken
 rm(d0.1, d0.2, d0.3, tabel, chosenModel, emmeans0.1, emmeans0.2, emm0.1, figure) # Just to be sure you're not comparing former models for this comparison
@@ -232,9 +234,9 @@ tabel <- cbind(AIC(d0.1))
 chosenModel = modelNames[which(tabel == min(tabel))] # Get model with lowest AIC
 
 Anova(chosenModel[[1]], type = 'III')
-plot(effect("phaseName:Breathing_Cond", chosenModel[[1]])) # Visualize the three way interaction we are interested in
+plot(effect("taskType:Breathing_Cond", chosenModel[[1]])) # Visualize the three way interaction we are interested in
 
-emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ phaseName | Breathing_Cond, adjust ="none", type = "response") # Pairwise comparisons
+emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ taskType | Breathing_Cond, adjust ="none", type = "response") # Pairwise comparisons
 emm0.1 <- summary(emmeans0.1)$emmeans
 emmeans0.1$contrasts
 pvalues  = append(pvalues ,summary(emmeans0.1$contrasts)$p.value) # Store Pvalues to correct for multiple corrections later
@@ -249,7 +251,7 @@ figure
 
 
 # 6) VoicedSegmentsPerSec ####
-formula <- 'VoicedSegmentsPerSec ~ phaseName*Breathing_Cond + (1|participantNum)' # Declare formula
+formula <- 'VoicedSegmentsPerSec ~ taskType*Breathing_Cond + (1|participantNum)' # Declare formula
 
 dataModel = audioData # Ensure correct data is taken
 rm(d0.1, d0.2, d0.3, tabel, chosenModel, emmeans0.1, emmeans0.2, emm0.1, figure) # Just to be sure you're not comparing former models for this comparison
@@ -264,9 +266,9 @@ tabel <- cbind(AIC(d0.1), AIC(d0.2), AIC(d0.3))
 chosenModel = modelNames[which(tabel == min(tabel))] # Get model with lowest AIC
 
 Anova(chosenModel[[1]], type = 'III')
-plot(effect("phaseName:Breathing_Cond", chosenModel[[1]])) # Visualize the three way interaction we are interested in
+plot(effect("taskType:Breathing_Cond", chosenModel[[1]])) # Visualize the three way interaction we are interested in
 
-emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ phaseName | Breathing_Cond, adjust ="none", type = "response") # Pairwise comparisons
+emmeans0.1<- emmeans(chosenModel[[1]], pairwise ~ taskType | Breathing_Cond, adjust ="none", type = "response") # Pairwise comparisons
 emm0.1 <- summary(emmeans0.1)$emmeans
 emmeans0.1$contrasts
 pvalues  = append(pvalues ,summary(emmeans0.1$contrasts)$p.value) # Store Pvalues to correct for multiple corrections later

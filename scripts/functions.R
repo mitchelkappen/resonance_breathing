@@ -1,7 +1,7 @@
 # Plot functions for:
-#   audioAnalysis.R
-#   hrvAnalysis.R
-#   allAnalysis.R
+#   2.0_allAnalysis.R
+
+cbPalette <- c("#56B4E9", "#E69F00", "#F0E442") # Set plot colors to colorblind friendly
 
 # One general plotting function
 audio_pretty_plot <-
@@ -84,9 +84,9 @@ addpvalues <-
         emm1 = sub(" -.*", "", str) # Get first part of string for 1st emmeans
         emm2 = sub(".* - ", "", str) # Get second part of string for 1st emmeans
         
-        task = as.character(contrasts$Breathing_Condition[contrasts$p.value < 0.05][i]) # Get correct corresponding task
-        index1 = means$Breathing_Condition == task & means$Phase == emm1 # Compute logical index for relevant values
-        index2 = means$Breathing_Condition == task & means$Phase == emm2
+        breathCond = as.character(contrasts$Breathing_Condition[contrasts$p.value < 0.05][i]) # Get correct corresponding breathCond
+        index1 = means$Breathing_Condition == breathCond & means$Phase == emm1 # Compute logical index for relevant values
+        index2 = means$Breathing_Condition == breathCond & means$Phase == emm2
         
         emmeanloc = mean(c(means$emmean[index1],means$emmean[index2])) # Compute mean of the two emmeans for positioning
         stdev = sd(c(means$emmean[index1],means$emmean[index2]))
@@ -101,7 +101,7 @@ addpvalues <-
         }
         
         # Give significance stars corresponding colors for clarity
-        if(task == 'Cyberball'){
+        if(breathCond == 'Control'){
           color = cbPalette[1]
         }else{
           color = cbPalette[2]
@@ -132,9 +132,9 @@ addpvaluesBetween <-
         emm1 = sub(" -.*", "", str) # Get first part of string for 1st emmeans
         emm2 = sub(".* - ", "", str) # Get second part of string for 1st emmeans
         
-        task = as.character(contrasts$Phase[contrasts$p.value < 0.05][i]) # Get correct corresponding task
-        index1 = means$Phase == task & means$Breathing_Condition == emm1 # Compute logical index for relevant values
-        index2 = means$Phase == task & means$Breathing_Condition == emm2
+        breathCond = as.character(contrasts$Phase[contrasts$p.value < 0.05][i]) # Get correct corresponding breathCond
+        index1 = means$Phase == breathCond & means$Breathing_Condition == emm1 # Compute logical index for relevant values
+        index2 = means$Phase == breathCond & means$Breathing_Condition == emm2
         
         emmeanloc = mean(c(means$emmean[index1],means$emmean[index2])) # Compute mean of the two emmeans for positioning
         stdev = sd(c(means$emmean[index1],means$emmean[index2]))
@@ -149,13 +149,13 @@ addpvaluesBetween <-
         }
         
         # Add significance to plot and return plot
-        if(task == "Control Task"){
+        if(breathCond == "Control"){
           xloc[1] = 0.85 # xLocation of asterisks
           xloc2[1] = xloc[1] + 0.05 # xLocation of vertical bar
           ystart[1] = means$emmean[index1]
           yend[1] = means$emmean[index2]
           direction = 1
-        }else if(task == "Stress Task"){
+        }else if(breathCond == "Slow"){
           xloc[2] = 2.15 # xLocation of asterisks
           xloc2[2] = xloc[2] - 0.05 # xLocation of vertical bar
           ystart[2] = means$emmean[index1]
@@ -166,11 +166,11 @@ addpvaluesBetween <-
         
         
         # gplot = gplot + geom_segment( aes(x = xloc2[i], y = ystart[i], xend = xloc2[i], yend = yend[i], linetype = "R fans"), linetype = "solid", colour = "black")
-        if(task == "Control Task"){
+        if(breathCond == "Control"){
           gplot = gplot + annotate(geom="text", x = xloc[1] + .04, y=emmeanloc, label=significance, color='black', size = 10, hjust = 1) # Add the annotation line to the ggplot
           gplot = gplot + geom_segment( aes(x = xloc2[1], y = ystart[1], xend = xloc2[1], yend = yend[1], linetype = "R fans"), linetype = "solid", colour = "black")
           
-        }else if(task == "Stress Task"){
+        }else if(breathCond == "Slow"){
           gplot = gplot + annotate(geom="text", x = xloc[2] - .04, y=emmeanloc, label=significance, color='black', size = 10, hjust = 0) # Add the annotation line to the ggplot
           gplot = gplot + geom_segment( aes(x = xloc2[2], y = ystart[2], xend = xloc2[2], yend = yend[2], linetype = "R fans"), linetype = "solid", colour = "black")
           
@@ -194,12 +194,12 @@ stateplot <-function(data, emmean_dataframe, var, title){
     geom_boxplot(data= data, aes(x = Phase, y=.data[[var]], fill=Breathing_Condition, shape = Breathing_Condition, color = Breathing_Condition), outlier.shape=NA, alpha=.5, width=.3, colour='black')+ #boxplot, see through, no outline, 
     scale_fill_manual(values = c("#56B4E9", "#E69F00"), #colours used in plot, repressent PMDD, PMS and noPMS
                       name='', #legend gets no name
-                      labels=c(paste0('Cyberball'), paste0('MIST')))+ #labels names
+                      labels=c(paste0('Control'), paste0('Slow')))+ #labels names
     geom_point(data= emmean_dataframe, aes(x = Phase, y = emmean, fill = Breathing_Condition, shape = Breathing_Condition), position= position_dodge(0.3), size=4)+ #points representing the emmeans
     guides(shape = "none")+ # Remove the geom_point shape legend
     guides(fill = guide_legend(override.aes = list(shape = c(16,17))))+ # Add correct shapes to legend
     labs(y=title)+
-    scale_x_discrete(labels=c("Control Task", "Stress Task"))+
+    scale_x_discrete(labels=c("Control", "Slow"))+
     theme(
       legend.key.size=unit(1.3, 'cm'), # make keys of legend bigger
       legend.text=element_text(size=13), # text legend bigger
@@ -293,10 +293,10 @@ cohens_d_paradigm_between <- function(dataframe, var, testmoment, group1, group2
   return(cohen.d(formula, data = temp, alpha=.05))
 }
 
-# cohens_d_paradigm_between(allData, 'VAS_NA', 'Control Task', 'MIST', 'Cyberball') #PMS-noPMS
+# cohens_d_paradigm_between(allData, 'VAS_NA', 'Control breathCond', 'MIST', 'Cyberball') #PMS-noPMS
 
 # State - at within paradigm
-cohens_d_within_paradigm <- function(dataframe, var, group, testmoment1 = 'Control Task', testmoment2 = 'Stress Task'){
+cohens_d_within_paradigm <- function(dataframe, var, group, testmoment1 = 'Control breathCond', testmoment2 = 'Stress breathCond'){
   temp = dataframe[dataframe$Phase == testmoment1 & dataframe$Breathing_Condition == group | dataframe$Phase == testmoment2 & dataframe$Breathing_Condition == group ,] # Create a dataframe with only relevant data
   formula <- as.formula(paste0(var, ' ~ Phase')) # Create formula of interest with as.formula()
   return(cohen.d(formula, data = temp, alpha=.05))

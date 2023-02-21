@@ -27,33 +27,11 @@ rm(list = ls()) # Clear environment
 cat("\014") # Clear console # # Or ctrl + l in VSCode
 dev.off() # Clear plot window
 
-# Set and Get directories
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #Set WD to script location
-plotDirectory = dirname(rstudioapi::getActiveDocumentContext()$path)
-source("functions.R") # Load document where functions are stored
-options(contrasts = c("contr.sum","contr.poly")) #use this for the p value of the t test
-
-nAGQ = 1
-plotPrefix <- "/../figures/"
-pvalues = c() # Create a variable to store all p-values to correct later
-
-# De-double transcripts
-transcriptData <- as.data.frame(read_parquet("E:/Data/2020_ResonanceBreathing/Data/Interim/Audio/df_transcripts.parquet"))
-uniqueData <- transcriptData[!duplicated(transcriptData[c("pptNum", "phaseNum")]), ]
-# When files came from share the phaseName was incorrect
-uniqueData$phaseName[uniqueData$phaseNum == 1] = 'Habituation'
-uniqueData$phaseName[uniqueData$phaseNum == 2] = 'Breathing'
-uniqueData$phaseName[uniqueData$phaseNum == 3] = 'Calculus'
-uniqueData$phaseName[uniqueData$phaseNum == 4] = 'SART'
-uniqueData$phaseName[uniqueData$phaseNum == 5] = 'PassiveViewing'
-# Write file
-write_parquet(uniqueData, "E:/Data/2020_ResonanceBreathing/Data/Interim/Audio/df_transcripts_cleaned.parquet")
-
 # Load in data ####
 questionData <- read_delim("../loc_data/Data_SF.txt")
 audioData <- as.data.frame(read_parquet("../loc_data/df_gemaps_func_16khz_noisy.parquet"))
 
-# Merge data
+# Start data Merge
 questionData <- questionData %>% rename(participantNum = Subject) # Give same Identifier name
 audioData <- audioData %>% rename(Phase = taskType) # Give same Phase name
 audioData <- audioData %>% mutate(Phase = substring(Phase, 3)) # Rename Phase variables for matching
@@ -63,16 +41,31 @@ questionData$Phase[questionData$Phase == "Stress"] <- "Calculus" # Rename Phase 
 audioData <- audioData[audioData$Phase != "SART" & audioData$Phase != "PassiveViewing", ] # Kick out final two phases
 questionData <- questionData[questionData$Phase != "SART" & questionData$Phase != "PassiveViewing", ] # Kick out final two phases
 
-allData = merge(audioData, questionData, by = "participantNum") # Merge audioData with trait questionnaires
-
-allData = merge(audioData, questionData, by = c("participantNum","Phase"))
+# Merge data and put two identifier columns up front
 allData = full_join(audioData, questionData, by = c("participantNum","Phase"))
+allData <- allData[, c("participantNum", "Phase", setdiff(names(allData), c("participantNum", "Phase")))]
 
 #### TRANSCRIPTS #####
+# Breathing
 breathing <- read.csv("../loc_data/sentiment/Breathing_features.csv")
-transcripts <- read.csv("../loc_data/df_transcripts.csv")
-temp <- transcripts[transcripts$phaseName == "Breathing", ]
+breathing$Phase = "Breathing"
+colnames(breathing)[colnames(breathing) == "Patient"] <- "participantNum"
 
-breathing <- read.csv("../loc_data/sentiment/Habituation_features.csv")
-transcripts <- read.csv("../loc_data/df_transcripts.csv")
-temp <- transcripts[transcripts$phaseName == "Breathing", ]
+# Habituation
+habituation <- read.csv("../loc_data/sentiment/Habituation_features.csv")
+habituation$Phase = "Habituation"
+colnames(habituation)[colnames(habituation) == "Patient"] <- "participantNum"
+
+# Calculus
+calculus <- read.csv("../loc_data/sentiment/Calculus_features.csv")
+calculus$Phase = "Calculus"
+colnames(calculus)[colnames(calculus) == "Patient"] <- "participantNum"
+
+# Merge the dataframes into transcriptData
+transcriptData <- rbind(breathing, habituation, calculus)
+
+# Merge with allData
+allData = full_join(allData, transcriptData, by = c("participantNum","Phase"))
+write.csv(allData, file = "../loc_data/allData.csv", row.names = FALSE)
+
+

@@ -1,0 +1,982 @@
+Subject	AF_NegativeAffect	AF_ActivatingPositiveAffect	AF_SoothingPositiveAffect	tDCSGroup	Breathing_Condition	PTQ_Total	SERI_Brooding	SERI_Reappraisal	SERI_Distraction	SERI_Acceptance	Phase	PASA_Threat	PASA_Challenge	PASA_SelfEfficacy	PASA_ControlExpectancy	PASA_PrimaryAppraisal	PASA_SecondaryAppraisal	PASA_StressIndex
+1	3.333333333	60.16666667	52.33333333	Active	Slow	6	8	14	18	20	Habituation							
+2	5	75.33333333	80.16666667	Sham	Slow	35	5	8	24	18	Habituation							
+3	0	88.83333333	62.83333333	Active	Control	32	18	13	15	14	Habituation							
+4	4.166666667	54.16666667	75	Sham	Control	11	5	9	20	23	Habituation							
+5	6.666666667	73	71.66666667	Active	Slow	11	12	19	24	19	Habituation							
+6	4.5	52	75.83333333	Sham	Slow	17	10	22	20	15	Habituation							
+7	1.666666667	31.83333333	82.5	Active	Control	0	8	13	12	17	Habituation							
+8	13.33333333	75	35	Sham	Control	34	16	12	22	16	Habituation							
+9	0	70	88.33333333	Active	Slow	22	15	17	23	22	Habituation							
+13	0	80	75.83333333	Active	Slow	7	14	22	23	13	Habituation							
+14	6.666666667	50.5	70	Sham	Slow	12	5	19	18	19	Habituation							
+15	1	77	70.66666667	Active	Control	6	10	26	21	27	Habituation							
+16	16.33333333	60.16666667	65.33333333	Sham	Control	32	12	17	18	17	Habituation							
+17	10.83333333	40.16666667	86.33333333	Active	Slow	2	5	6	6	9	Habituation							
+18	13.5	53.16666667	59	Sham	Slow	30	13	20	20	18	Habituation							
+19	5.666666667	67.83333333	81.16666667	Active	Control	3	4	8	5	22	Habituation							
+20	1.666666667	72.5	80	Sham	Control	2	4	20	17	9	Habituation							
+21	0	78.5	84.16666667	Active	Slow	17	4	19	21	21	Habituation							
+22	13.83333333	59.33333333	79.16666667	Sham	Slow	24	21	24	19	17	Habituation							
+23	1.666666667	60	65	Active	Control	26	10	16	17	21	Habituation							
+24	1.666666667	48	70	Sham	Control	29	4	18	23	15	Habituation							
+25	0.166666667	67.83333333	96.16666667	Active	Slow	0	4	22	17	23	Habituation							
+26	1.833333333	41.66666667	64.83333333	Sham	Slow	27	8	5	7	21	Habituation							
+27	5	50	62.5	Active	Control	38	14	15	24	17	Habituation							
+28	27.16666667	38	57.5	Sham	Control	19	14	17	26	12	Habituation							
+29	20	49.83333333	58.33333333	Active	Slow	31	17	14	12	19	Habituation							
+30	0	64.16666667	96.66666667	Sham	Slow	3	4	23	15	28	Habituation							
+31	4.833333333	22.16666667	73.16666667	Active	Control	41	10	7	22	20	Habituation							
+32	1.833333333	53.33333333	68.5	Sham	Control	30	9	18	19	14	Habituation							
+33	0	16.66666667	56.66666667	Active	Slow	17	8	13	17	24	Habituation							
+34	0	85	83.33333333	Sham	Slow	3	5	20	25	25	Habituation							
+35	10	76.66666667	79.16666667	Active	Control	18	11	24	24	18	Habituation							
+36	0	70.83333333	89.16666667	Sham	Control	5	4	23	14	22	Habituation							
+37	25.66666667	68	73.33333333	Active	Slow	2	6	22	17	22	Habituation							
+38	0.333333333	80.33333333	86.16666667	Sham	Slow	2	4	28	28	28	Habituation							
+39	6.666666667	57.66666667	59.16666667	Active	Control	31	15	16	17	17	Habituation							
+40	4.5	80	79.16666667	Sham	Control	26	8	15	23	20	Habituation							
+41	0.166666667	88	87.83333333	Active	Slow	24	14	22	22	17	Habituation							
+42	5	44.16666667	74.16666667	Sham	Slow	25	12	25	19	19	Habituation							
+43	29.66666667	61	77.66666667	Active	Control	17	11	18	25	19	Habituation							
+44	6.666666667	50.33333333	52.16666667	Sham	Control	15	15	20	23	11	Habituation							
+45	3.333333333	58.33333333	75	Active	Slow	4	4	14	16	27	Habituation							
+46	9.166666667	68.33333333	75	Sham	Slow	28	13	18	26	16	Habituation							
+47	1.333333333	65.5	82.16666667	Active	Control	11	13	7	28	17	Habituation							
+48	5.166666667	74.66666667	87.66666667	Sham	Control	29	11	25	20	18	Habituation							
+49	8.333333333	78.83333333	77	Active	Slow	33	7	22	26	14	Habituation							
+50	0	79.16666667	83.33333333	Sham	Slow	6	4	22	17	9	Habituation							
+51	1.666666667	59.16666667	81.66666667	Active	Control	5	13	23	26	22	Habituation							
+52	1.5	82.16666667	80	Sham	Control	18	13	19	24	19	Habituation							
+53	0	8.333333333	78.33333333	Active	Slow	7	4	7	4	24	Habituation							
+54	0.833333333	68.66666667	77.66666667	Sham	Slow	13	8	11	23	14	Habituation							
+55	2.666666667	72.66666667	80	Active	Control	19	4	19	18	18	Habituation							
+56	0	71.66666667	75	Sham	Control	7	4	18	16	28	Habituation							
+57	0.166666667	6.666666667	84	Active	Slow	0	10	24	24	16	Habituation							
+58	0	36.66666667	86.66666667	Sham	Slow	2	4	8	4	6	Habituation							
+59	28.83333333	33.16666667	46.16666667	Active	Control	6	11	21	14	20	Habituation							
+60	6.666666667	41.66666667	75	Sham	Control	12	4	20	24	19	Habituation							
+61	0	73.5	73.33333333	Active	Slow	12	4	28	27	14	Habituation							
+62	2.333333333	73.33333333	81.83333333	Sham	Slow	22	4	16	17	6	Habituation							
+63	8.666666667	35	66.66666667	Active	Control	27	20	21	22	14	Habituation							
+64	0	68.33333333	76.66666667	Sham	Control	4	4	13	17	22	Habituation							
+65	0	71.66666667	65	Active	Slow	32	5	17	12	16	Habituation							
+66	5	60	75	Sham	Slow	4	4	27	24	25	Habituation							
+67	0	63.33333333	81.83333333	Active	Control	14	13	20	12	22	Habituation							
+68	15.16666667	67.33333333	75	Sham	Control	18	10	22	24	13	Habituation							
+69	30	15	40	Active	Slow	33	16	17	24	11	Habituation							
+70	0	75.33333333	80	Sham	Slow	17	4	17	15	14	Habituation							
+71	8	70	77.5	Active	Control	6	12	18	18	20	Habituation							
+72	2.166666667	82.66666667	74.83333333	Sham	Control	1	4	4	4	4	Habituation							
+73	13	24.66666667	72.5	Active	Slow	31	13	23	13	24	Habituation							
+74	19.16666667	62.5	77.66666667	Sham	Slow	1	8	11	7	12	Habituation							
+75	21.66666667	66.66666667	71.66666667	Active	Control	19	5	28	28	4	Habituation							
+76	1.666666667	76.33333333	81.16666667	Sham	Control	15	4	11	11	26	Habituation							
+77	0	90.16666667	84.83333333	Active	Slow	0	4	10	16	10	Habituation							
+78	50.83333333	48.83333333	55.66666667	Sham	Slow	28	18	13	19	15	Habituation							
+79	5	82.83333333	83.16666667	Active	Control	12	5	24	22	14	Habituation							
+80	5.5	74.66666667	65	Sham	Control	17	8	14	20	16	Habituation							
+81	6.833333333	66	77.33333333	Active	Slow	38	17	11	24	9	Habituation							
+82	13.16666667	70	69	Sham	Slow	17	9	20	12	19	Habituation							
+83	10.33333333	60.83333333	43.16666667	Active	Control	10	21	22	20	18	Habituation							
+84	13.66666667	77.5	72	Sham	Control	20	6	21	21	21	Habituation							
+85	14.83333333	64.33333333	62.5	Active	Slow	17	7	24	24	18	Habituation							
+86	0	79.5	87.5	Sham	Slow	10	5	21	21	21	Habituation							
+87	19.83333333	64.33333333	77.5	Active	Control	23	20	20	24	15	Habituation							
+88	1.666666667	58.33333333	82.5	Sham	Control	18	5	18	20	26	Habituation							
+89	3.333333333	51.16666667	60.5	Active	Slow	17	15	18	18	25	Habituation							
+90	0	72.5	68.16666667	Sham	Slow	1	16	16	16	16	Habituation							
+91	11.66666667	71.66666667	63.33333333	Active	Control	19	8	17	17	20	Habituation							
+92	9.833333333	58.5	70.66666667	Sham	Control	33	20	18	20	18	Habituation							
+93	9	54	63	Active	Slow	33	13	18	23	12	Habituation							
+94	0.833333333	70.66666667	71	Sham	Slow	7	5	12	5	21	Habituation							
+95	0.166666667	82	86.83333333	Active	Control	8	10	9	23	18	Habituation							
+97	41.16666667	67.16666667	72.5	Active	Slow	25	6	11	27	23	Habituation							
+98	0	75.16666667	80.16666667	Sham	Slow	2	4	6	4	24	Habituation							
+99	0	83.33333333	98.33333333	Active	Control	15	4	19	26	18	Habituation							
+100	0	55.16666667	90	Sham	Control	16	11	22	23	14	Habituation							
+101	3	69.83333333	89	Active	Slow	6	7	6	21	25	Habituation							
+102	0	79	86.83333333	Sham	Slow	9	4	26	27	14	Habituation							
+103	29	65	61.83333333	Active	Control	0	4	24	24	19	Habituation							
+104	0	41.83333333	57.5	Sham	Control	18	6	24	22	18	Habituation							
+105	4.166666667	69.33333333	94.33333333	Active	Slow	25	15	25	21	11	Habituation							
+106	53.16666667	58	60	Sham	Slow	44	24	23	18	18	Habituation							
+107	10.16666667	74.33333333	86.66666667	Active	Control	6	8	18	14	14	Habituation							
+108	0.666666667	54.66666667	84.66666667	Sham	Control	5	4	8	25	22	Habituation							
+109	5.333333333	65	64.33333333	Active	Slow	15	11	15	14	18	Habituation							
+110	9.5	73.5	68.33333333	Sham 	Slow	38	22	15	20	20	Habituation							
+111	2.666666667	85	94	Active	Control	13	4	9	7	11	Habituation							
+112	10.66666667	61	64.33333333	Sham	Control	9	22	6	20	8	Habituation							
+113	0	90.83333333	99.66666667	Active	Slow	6	4	22	22	26	Habituation							
+114	16.66666667	60	61.66666667	Sham	Slow	18	13	20	24	17	Habituation							
+115	0	89.66666667	96.66666667	Active	Control	11	6	28	7	12	Habituation							
+116	8.166666667	68.83333333	80.83333333	Sham	Control	25	9	19	11	15	Habituation							
+117	3.833333333	59.5	74.33333333	Active 	Slow	35	9	18	22	19	Habituation							
+118	0	79.66666667	82.5	Sham	Slow	15	8	7	11	26	Habituation							
+119	0	68.33333333	80	Active	Control	5	6	15	4	27	Habituation							
+120	10	65	85.83333333	Sham	Control	2	5	19	13	26	Habituation							
+121	0	73.33333333	73.16666667	Active	Slow	0	4	28	28	22	Habituation							
+122	0	80.16666667	85.16666667	Sham	Slow	13	5	25	20	6	Habituation							
+123	6.666666667	53.33333333	63.33333333	Active	Control	20	17	16	20	20	Habituation							
+124	0	35.5	80.66666667	Sham	Control	33	16	15	17	21	Habituation							
+125	1	33.33333333	78.33333333	Active	Slow	45	15	10	28	14	Habituation							
+126	2.833333333	81.66666667	79	Sham	Slow	6	4	8	5	8	Habituation							
+127	3.333333333	80	83.33333333	Active	Control	9	8	24	22	22	Habituation							
+128	11.66666667	76.66666667	56.66666667	Sham	Control	18	17	17	18	10	Habituation							
+129	8	58.33333333	42.66666667	Active	Slow	15	19	13	20	16	Habituation							
+130	0	68.33333333	83.33333333	Sham	Slow	11	9	28	28	10	Habituation							
+131	1.166666667	77.16666667	71.33333333	Active	Control	4	13	18	22	18	Habituation							
+132	5	73.33333333	74.66666667	Sham	Control	15	14	23	22	20	Habituation							
+133	0	68.33333333	68.33333333	Active	Slow	3	16	16	16	16	Habituation							
+134	3.333333333	84	78.33333333	Sham	Slow	24	14	25	25	14	Habituation							
+135	6.333333333	56.33333333	67.66666667	Active	Control	17	11	20	19	20	Habituation							
+136	15	71.66666667	63.33333333	Sham	Control	1	6	19	23	13	Habituation							
+137	62	73.83333333	46	Active	Slow	43	20	20	14	20	Habituation							
+138	30.33333333	60.66666667	73.66666667	Sham	Slow	21	15	13	24	21	Habituation							
+139	6.666666667	81.66666667	89.83333333	Active	Control	0	4	4	4	22	Habituation							
+140	3.333333333	78.33333333	73.33333333	Sham	Control	14	7	26	22	18	Habituation							
+141	1.666666667	52.5	69.66666667	Active	Slow	32	8	18	21	20	Habituation							
+142	9.666666667	70.5	81.33333333	Sham	Slow	22	8	20	23	21	Habituation							
+143	3	53	52.66666667	Active	Control	22	16	19	20	19	Habituation							
+144	2.5	63.33333333	70	Sham	Control	10	5	11	6	21	Habituation							
+145	0	63.83333333	80.5	Active	Slow	10	9	22	20	21	Habituation							
+146	0	63.5	65	Sham	Slow	19	8	21	21	20	Habituation							
+147	15	66.66666667	65	Sham	Control	26	8	20	24	22	Habituation							
+148	6.666666667	16.66666667	27.83333333	Sham	Control	0	4	20	28	23	Habituation							
+149	0.166666667	60.83333333	76.16666667	Active	Slow	35	25	9	12	19	Habituation							
+150	0	87.5	91.5	Sham	Slow	17	6	25	16	25	Habituation							
+151	7.5	75	83.33333333	Active	Control	29	15	20	24	22	Habituation							
+152	0.166666667	76.66666667	80	Sham	Control	20	24	14	20	15	Habituation							
+153	1.333333333	55.83333333	74.66666667	Active	Slow	2	4	7	12	20	Habituation							
+154	0	71.66666667	75	Sham	Slow	6	4	4	7	20	Habituation							
+155	19.5	43.66666667	54.16666667	Active	Control	44	9	24	26	8	Habituation							
+156	0	76.66666667	71.66666667	Sham	Control	33	23	12	23	21	Habituation							
+157	0	50	61.66666667	Active	Slow	9	4	22	22	16	Habituation							
+158	2	70.83333333	68.33333333	Sham	Slow	30	4	14	19	19	Habituation							
+159	1.666666667	48.33333333	68.33333333	Active	Control	40	14	16	15	22	Habituation							
+160	0.833333333	63.16666667	80.33333333	Sham	Control	6	12	12	24	24	Habituation							
+161	7.333333333	56.16666667	71.33333333	Active	Slow	26	10	22	17	22	Habituation							
+162	4	67.33333333	73.33333333	Sham	Slow	17	5	20	16	18	Habituation							
+163	0	87.5	93.33333333	Active	Control	0	4	13	7	16	Habituation							
+164	5.333333333	88.66666667	79.83333333	Sham	Control	25	10	23	22	9	Habituation							
+165	15	60	30	Active	Control	12	4	16	26	10	Habituation							
+166	0	35	78.5	Sham	Slow	2	5	22	15	25	Habituation							
+167	3.166666667	93.5	86.33333333	Active	Control	1	6	26	21	22	Habituation							
+168	0	41.5	70	Sham	Control	0	5	16	16	21	Habituation							
+169	0	63.33333333	88.33333333	Active	Slow	11	4	6	4	28	Habituation							
+170	13.16666667	62.66666667	67.66666667	Sham 	Slow	34	12	16	18	11	Habituation							
+171	0.166666667	78.33333333	59.33333333	Active	Control	26	20	20	23	16	Habituation							
+172	6.166666667	89.16666667	81.5	Sham	Control	20	7	21	11	22	Habituation							
+173	0	85	90	Active	Slow	7	10	23	27	7	Habituation							
+174	4.833333333	65	85	Active	Control	11	6	18	20	22	Habituation							
+175	25.83333333	66.83333333	75.5	Active	Slow	6	9	25	8	24	Habituation							
+176	0	71.66666667	83.33333333	Sham	Control	4	4	15	7	23	Habituation							
+177	13.33333333	60.33333333	78	Active	Slow	15	16	12	20	14	Habituation							
+178	0.5	48.33333333	58.66666667	Sham	Slow	25	8	20	20	21	Habituation							
+179	8.166666667	75.83333333	89.5	Active	Control	10	12	18	10	15	Habituation							
+180	14.5	63.16666667	66.66666667	Sham	Control	22	8	22	26	19	Habituation							
+181	0	30.83333333	83.16666667	Active	Slow	12	4	9	8	15	Habituation							
+182	12.33333333	74.16666667	88.5	Sham	Slow	2	6	21	22	24	Habituation							
+183	2.333333333	75.5	77.33333333	Active	Control	23	23	14	19	17	Habituation							
+184	1.666666667	58.33333333	80.83333333	Sham	Control	12	13	21	24	23	Habituation							
+185	14	74	47.66666667	Active	Slow	35	23	21	15	13	Habituation							
+186	0	73.33333333	63.33333333	Sham	Slow	0	4	5	6	14	Habituation							
+187	24.83333333	65	71.66666667	Active	Control	4	5	8	22	27	Habituation							
+188	0	50.5	80.83333333	Sham	Control	1	4	17	28	28	Habituation							
+189	4.166666667	55	90	Active	Slow	7	6	16	13	20	Habituation							
+190	1.666666667	68.33333333	78.33333333	Sham	Slow	13	4	22	27	18	Habituation							
+191	2.833333333	87.5	83.5	Active	Control	11	7	27	23	22	Habituation							
+192	13.33333333	62	49.16666667	Sham	Control	42	24	21	24	13	Habituation							
+193	54	43.33333333	40.33333333	Active	Slow	42	21	15	21	15	Habituation							
+194	13.83333333	61.66666667	64	Sham	Slow	16	11	20	22	15	Habituation							
+195	5.833333333	49.83333333	56.83333333	Active	Control	6	4	5	4	28	Habituation							
+196	0	6.666666667	61	Sham	Control	1	7	21	20	21	Habituation							
+197	3.666666667	71.83333333	71	Active	Slow	13	15	19	17	17	Habituation							
+198	3.5	88.66666667	79.5	Sham	Slow	17	13	23	13	27	Habituation							
+199	76.5	53.66666667	54.5	Active	Control	45	24	24	24	24	Habituation							
+200	5	75	85	Sham	Slow	30	22	24	24	15	Habituation							
+2	0.5	62.33333333	94	Sham	Slow	23	4	16	9	22	Breathing							
+3	1.333333333	78.5	76.66666667	Active	Control	39	19	17	14	21	Breathing							
+4	3.333333333	65	58.33333333	Sham	Control	8	4	4	22	14	Breathing							
+5	4.666666667	80.16666667	80	Active	Slow	22	9	21	22	13	Breathing							
+6	5	53.33333333	82.5	Sham	Slow	30	17	27	22	18	Breathing							
+7	0	24.83333333	88.83333333	Active	Control	0	8	9	8	15	Breathing							
+8	13.33333333	75.33333333	48.5	Sham	Control	36	17	12	22	16	Breathing							
+9	0	61.66666667	76.5	Active	Slow	25	4	17	19	17	Breathing							
+10	0	75	88.33333333	Sham	Control	20	10	23	28	23	Breathing							
+11	0	50	100	Active	Control	10	16	16	16	16	Breathing							
+12	0	55	81.66666667	Sham	Control	13	9	24	22	12	Breathing							
+13	29.33333333	33.33333333	13.33333333	Active	Slow	18	17	21	23	15	Breathing							
+14	0.666666667	58.33333333	72.66666667	Sham	Slow	10	4	16	21	16	Breathing							
+15	0	84.16666667	93.16666667	Active	Control	2	4	4	4	4	Breathing							
+16	15	51.33333333	74.16666667	Sham	Control	17	6	17	22	19	Breathing							
+17	10.83333333	42.66666667	80.5	Active	Slow	28	6	20	12	21	Breathing							
+18	11.66666667	51.66666667	70	Sham	Slow	13	7	22	23	26	Breathing							
+19	0.166666667	66.66666667	84.83333333	Active	Control	6	4	7	10	18	Breathing							
+20	0	76.66666667	81.66666667	Sham	Control	4	4	15	14	8	Breathing							
+21	0.333333333	60.16666667	89.16666667	Active	Slow	20	9	21	17	22	Breathing							
+22	23	52.83333333	35	Sham	Slow	28	11	25	25	23	Breathing							
+23	10	38.33333333	68.33333333	Active	Control	19	10	15	17	19	Breathing							
+24	0.166666667	51.66666667	55.66666667	Sham	Control	19	7	23	22	16	Breathing							
+25	0	80.16666667	99.66666667	Active	Slow	0	8	23	19	23	Breathing							
+26	35	6.666666667	18.33333333	Sham	Slow	44	4	4	18	13	Breathing							
+27	6.666666667	56.5	75.16666667	Active	Control	44	16	11	20	16	Breathing							
+28	8.333333333	33.33333333	83.33333333	Sham	Control	28	10	22	20	18	Breathing							
+29	3	45.16666667	76	Active	Slow	21	12	12	12	20	Breathing							
+30	0	50	96.66666667	Sham	Slow	0	4	24	17	28	Breathing							
+31	8	6.666666667	29.33333333	Active	Control	8	4	4	6	25	Breathing							
+32	0.166666667	38.33333333	76.66666667	Sham	Control	17	8	20	20	19	Breathing							
+33	0	23.33333333	57	Active	Slow	17	12	15	22	20	Breathing							
+34	0	83.33333333	90	Sham	Slow	15	5	24	22	24	Breathing							
+35	0	79.33333333	95.5	Active	Control	22	19	24	12	12	Breathing							
+36	0	91.66666667	96.66666667	Sham	Control	28	5	19	28	25	Breathing							
+37	14.83333333	45.16666667	76.83333333	Active	Slow	1	5	19	20	19	Breathing							
+38	0.166666667	75.66666667	99.33333333	Sham	Slow	9	4	20	27	26	Breathing							
+39	4.333333333	41.16666667	73.66666667	Active	Control	16	11	13	11	19	Breathing							
+40	8.333333333	66.66666667	81.66666667	Sham	Control	29	9	18	16	21	Breathing							
+41	6	75.5	89.5	Active	Slow	26	16	23	21	22	Breathing							
+42	0.166666667	64.66666667	97.5	Sham	Slow	37	5	28	18	21	Breathing							
+43	16.83333333	54	87.83333333	Active	Control	42	9	17	26	18	Breathing							
+44	31.66666667	50	56.16666667	Sham	Control	16	19	19	21	12	Breathing							
+45	0	60.16666667	78.33333333	Active	Slow	20	6	10	6	27	Breathing							
+46	1.666666667	73	81.66666667	Sham	Slow	17	6	18	25	16	Breathing							
+47	0	71.83333333	82.66666667	Active	Control	5	5	21	4	21	Breathing							
+48	9.833333333	31.33333333	87.16666667	Sham	Control	24	8	21	20	14	Breathing							
+49	44	70.33333333	47.33333333	Active	Slow	33	12	23	25	12	Breathing							
+50	0	75	73.33333333	Sham	Slow	9	7	23	28	9	Breathing							
+51	0.333333333	29.5	78.5	Active	Control	16	14	21	21	22	Breathing							
+52	0.166666667	63.33333333	91.83333333	Sham	Control	26	6	18	13	23	Breathing							
+53	0	0	65	Active	Slow	40	11	11	15	18	Breathing							
+54	0	69.33333333	80	Sham	Slow	36	14	12	13	18	Breathing							
+55	0.166666667	68.33333333	98.33333333	Active	Control	22	4	20	16	26	Breathing							
+56	0	65	70	Sham	Control	10	4	21	19	26	Breathing							
+57	0	6.666666667	66.5	Active	Slow	0	4	28	28	22	Breathing							
+58	0	41.66666667	71.83333333	Sham	Slow	20	5	21	20	17	Breathing							
+60	0	45	80	Sham	Control	0	4	13	10	28	Breathing							
+61	0	73.16666667	73	Active	Slow	13	4	28	28	10	Breathing							
+62	3.333333333	68.16666667	85.66666667	Sham	Slow	41	4	18	13	8	Breathing							
+63	11.66666667	33.5	80.5	Active	Control	22	11	21	23	20	Breathing							
+64	1.666666667	66.16666667	68.83333333	Sham	Control	12	6	9	14	26	Breathing							
+65	31.66666667	28.33333333	3.333333333	Active	Slow	23	8	16	22	17	Breathing							
+66	0	53.33333333	90	Sham	Slow	4	4	26	24	20	Breathing							
+67	0	55.5	68	Active	Control	20	10	20	16	22	Breathing							
+68	14.66666667	43.66666667	81.83333333	Sham	Control	38	14	20	20	20	Breathing							
+69	55	10	15	Active	Slow	45	19	11	14	15	Breathing							
+70	0	37.5	68.33333333	Sham	Slow	24	5	16	21	21	Breathing							
+71	0.166666667	33.5	97	Active	Control	15	8	23	24	24	Breathing							
+72	23.33333333	75.16666667	66.83333333	Sham	Control	16	4	19	22	8	Breathing							
+73	5	45	92.5	Active	Slow	32	13	25	10	24	Breathing							
+74	14.33333333	60.16666667	63.16666667	Sham	Slow	42	12	11	12	23	Breathing							
+75	1.666666667	55.66666667	72.66666667	Active	Control	24	10	25	23	8	Breathing							
+76	0	64.83333333	79.16666667	Sham	Control	20	4	10	9	27	Breathing							
+77	0	88.33333333	88.16666667	Active	Slow	14	4	28	22	22	Breathing							
+78	20	44.16666667	84.16666667	Sham	Slow	27	7	13	4	24	Breathing							
+79	6.166666667	74.33333333	89.83333333	Active	Control	10	6	25	25	15	Breathing							
+80	1.5	80	88.33333333	Sham	Control	18	4	18	10	24	Breathing							
+81	30	10	13.33333333	Active	Slow	44	10	23	15	18	Breathing							
+82	11.66666667	65	81.33333333	Sham	Slow	4	6	16	15	23	Breathing							
+83	20.5	61.66666667	60.33333333	Active	Control	15	19	20	18	21	Breathing							
+84	10.16666667	72	87.66666667	Sham	Control	16	8	18	20	21	Breathing							
+85	9.166666667	57.66666667	62.66666667	Active	Slow	24	15	24	24	21	Breathing							
+86	4.666666667	71.66666667	67.5	Sham	Slow	30	5	23	24	12	Breathing							
+87	33	34.66666667	54.33333333	Active	Control	21	17	17	17	16	Breathing							
+88	1.666666667	33.33333333	70	Sham	Control	38	11	16	20	21	Breathing							
+89	0	45	68.5	Active	Slow	45	13	18	22	21	Breathing							
+90	10.83333333	30	81	Sham	Slow	30	13	19	11	25	Breathing							
+91	0	41.5	80	Active	Control	1	4	14	11	20	Breathing							
+92	10	62.33333333	67.5	Sham	Control	22	14	19	17	18	Breathing							
+93	3	56	77.33333333	Active	Slow	28	8	13	8	18	Breathing							
+94	0.333333333	62.33333333	82	Sham	Slow	10	5	7	8	24	Breathing							
+95	0	81.5	88.33333333	Active	Control	17	8	8	18	21	Breathing							
+96	0	57.33333333	94.16666667	Sham	Control	30	4	13	8	27	Breathing							
+97	10	64.83333333	75	Active	Slow	30	9	12	21	19	Breathing							
+98	18.33333333	63.5	58.33333333	Sham	Slow	33	5	12	20	22	Breathing							
+99	0	84.16666667	100	Active	Control	5	4	15	7	28	Breathing							
+100	5	45	86.66666667	Sham	Control	37	19	20	26	13	Breathing							
+101	6.333333333	41.83333333	93.33333333	Active	Slow	12	8	7	22	24	Breathing							
+102	0.333333333	78.66666667	92.66666667	Sham	Slow	12	4	28	27	11	Breathing							
+103	0	30	75	Active	Control	0	4	25	20	26	Breathing							
+104	0	60	72.33333333	Sham	Control	35	4	9	18	26	Breathing							
+105	0	92.66666667	96.66666667	Active	Slow	5	6	22	19	24	Breathing							
+106	48	54	64.16666667	Sham	Slow	38	20	17	19	22	Breathing							
+107	8.166666667	60	69.83333333	Active	Control	39	15	14	13	20	Breathing							
+108	0	77.5	97.5	Sham	Control	1	4	4	4	4	Breathing							
+109	1.5	62	79.33333333	Active	Slow	13	7	17	11	21	Breathing							
+110	13.5	76.66666667	81.83333333	Sham 	Slow	38	21	17	20	20	Breathing							
+111	1.5	94	96.66666667	Active	Control	19	4	20	22	22	Breathing							
+112	6.333333333	63.66666667	65	Sham	Control	39	25	6	17	9	Breathing							
+114	17.83333333	60	60	Sham	Slow	26	13	20	20	19	Breathing							
+115	0	80	97.83333333	Active	Control	13	4	28	6	13	Breathing							
+116	1.666666667	86.16666667	86.66666667	Sham	Control	17	8	23	12	15	Breathing							
+117	0	48.66666667	86.33333333	Active 	Slow	15	12	14	12	18	Breathing							
+118	0.166666667	82.16666667	83.33333333	Sham	Slow	20	7	8	15	23	Breathing							
+119	0	78.33333333	91.66666667	Active	Control	3	4	13	11	24	Breathing							
+120	2.833333333	66.66666667	90.83333333	Sham	Control	16	4	20	19	26	Breathing							
+121	0.333333333	70	68.33333333	Active	Slow	0	4	28	28	22	Breathing							
+122	10	89.5	86.33333333	Sham	Slow	14	5	21	13	17	Breathing							
+123	15	46.66666667	63.33333333	Active	Control	33	21	12	22	20	Breathing							
+124	0.166666667	45	42.5	Sham	Control	17	11	11	10	19	Breathing							
+125	0.166666667	30	80	Active	Slow	44	25	10	28	8	Breathing							
+126	1	68	82	Sham	Slow	13	4	11	20	24	Breathing							
+127	0	73.33333333	98.33333333	Active	Control	0	4	18	4	24	Breathing							
+128	5	65	63.33333333	Sham	Control	19	11	13	9	23	Breathing							
+129	4.833333333	39.66666667	51.5	Active	Slow	20	6	12	9	25	Breathing							
+130	0	75	78.33333333	Sham	Slow	3	4	28	28	10	Breathing							
+131	2.5	64.16666667	68.5	Active	Control	4	12	24	25	18	Breathing							
+132	7.5	69	80	Sham	Control	18	15	19	20	18	Breathing							
+133	0	83.5	78.33333333	Active	Slow	6	16	16	16	16	Breathing							
+134	21.66666667	28.33333333	81.83333333	Sham	Slow	17	9	24	24	10	Breathing							
+135	9.833333333	50.5	64.5	Active	Control	16	9	15	16	19	Breathing							
+136	0	64	70.66666667	Sham	Control	19	15	20	21	24	Breathing							
+137	51.66666667	68	48.66666667	Active	Slow	43	20	20	16	16	Breathing							
+138	25	32.66666667	82.33333333	Sham	Slow	25	9	16	17	16	Breathing							
+139	3.666666667	69.16666667	90	Active	Control	29	9	23	20	22	Breathing							
+140	0	73.33333333	93.33333333	Sham	Control	16	9	24	17	23	Breathing							
+141	0	63.33333333	80	Active	Slow	19	4	16	7	22	Breathing							
+142	14.33333333	65	79.16666667	Sham	Slow	22	6	17	26	24	Breathing							
+143	4.833333333	37.83333333	40.16666667	Active	Control	36	16	16	20	16	Breathing							
+144	1.666666667	77.5	66.66666667	Sham	Control	10	5	17	9	23	Breathing							
+145	25.16666667	34.66666667	49.33333333	Active	Slow	22	8	20	18	23	Breathing							
+146	1.666666667	26.66666667	57.83333333	Sham	Slow	37	9	14	21	20	Breathing							
+147	1.666666667	36.66666667	90	Sham	Control	18	6	16	9	24	Breathing							
+148	6.833333333	10	80.16666667	Sham	Control	25	12	22	13	21	Breathing							
+149	1.5	65.5	79.16666667	Active	Slow	20	20	14	18	20	Breathing							
+150	0	84.16666667	97.66666667	Sham	Slow	7	4	22	20	26	Breathing							
+151	10	80	83.33333333	Active	Control	29	12	21	23	21	Breathing							
+152	1.666666667	56.83333333	87	Sham	Control	16	10	19	21	19	Breathing							
+153	2	40.33333333	70.5	Active	Slow	8	5	8	24	12	Breathing							
+154	1.333333333	71.83333333	78.66666667	Sham	Slow	2	4	5	5	24	Breathing							
+155	0.166666667	14	65.5	Active	Control	16	5	24	28	12	Breathing							
+156	0	51.66666667	76.66666667	Sham	Control	34	22	12	23	24	Breathing							
+157	5	35	47.66666667	Active	Slow	20	6	15	12	18	Breathing							
+158	0	61.66666667	90	Sham	Slow	4	6	8	22	18	Breathing							
+159	3.5	6.666666667	68.16666667	Active	Control	41	12	11	12	21	Breathing							
+160	0.833333333	67.66666667	68.33333333	Sham	Control	26	12	17	24	24	Breathing							
+161	8.333333333	37.5	77.33333333	Active	Slow	23	14	8	14	24	Breathing							
+162	1.666666667	63.33333333	88.33333333	Sham	Slow	24	4	23	12	25	Breathing							
+163	0	84.16666667	94.33333333	Active	Control	6	4	17	7	21	Breathing							
+164	1.333333333	89.83333333	87.5	Sham	Control	30	9	23	23	16	Breathing							
+165	20	65	40	Active	Control	0	4	8	8	10	Breathing							
+166	0	24.16666667	87	Sham	Slow	11	4	23	17	24	Breathing							
+167	0	59.66666667	97.33333333	Active	Control	6	4	22	12	27	Breathing							
+168	0	63.66666667	75	Sham	Control	0	13	17	18	20	Breathing							
+169	0	11.66666667	91.83333333	Active	Slow	26	8	5	23	22	Breathing							
+170	18.33333333	49.83333333	66	Sham 	Slow	29	9	13	14	13	Breathing							
+171	0	65	70.16666667	Active	Control	27	9	15	18	21	Breathing							
+172	5.666666667	70	79	Sham	Control	32	8	23	15	21	Breathing							
+173	0	88.16666667	95	Active	Slow	33	12	25	27	13	Breathing							
+174	1	65	95.83333333	Active	Control	24	5	20	19	25	Breathing							
+175	13.5	55.5	90.16666667	Active	Slow	8	7	23	9	28	Breathing							
+176	0	65	78.33333333	Sham	Control	1	4	11	7	19	Breathing							
+177	15	62.5	74.66666667	Active	Slow	16	12	20	19	14	Breathing							
+178	8.5	16.66666667	79.5	Sham	Slow	17	8	18	21	19	Breathing							
+179	9.833333333	71.16666667	68.16666667	Active	Control	25	11	17	19	21	Breathing							
+180	4.5	25.5	83.33333333	Sham	Control	14	11	24	24	17	Breathing							
+181	0	16.33333333	76.66666667	Active	Slow	22	7	24	21	16	Breathing							
+182	4.166666667	39.33333333	97	Sham	Slow	3	4	22	16	25	Breathing							
+183	0	77.16666667	94.5	Active	Control	6	19	18	24	14	Breathing							
+184	10	33.16666667	51.66666667	Sham	Control	41	18	8	11	20	Breathing							
+185	9	28.83333333	63.5	Active	Slow	31	10	20	19	20	Breathing							
+186	21.66666667	38.33333333	71.66666667	Sham	Slow	10	4	9	16	17	Breathing							
+187	8.333333333	60.16666667	88.33333333	Active	Control	20	6	16	28	26	Breathing							
+188	1.333333333	46.16666667	85.83333333	Sham	Control	9	4	24	28	28	Breathing							
+189	5	30	80.16666667	Active	Slow	15	5	11	12	18	Breathing							
+190	1.666666667	66.66666667	80	Sham	Slow	1	4	22	25	24	Breathing							
+191	8.333333333	80.83333333	82.33333333	Active	Control	23	4	26	22	20	Breathing							
+192	21.66666667	43.33333333	73.33333333	Sham	Control	24	14	15	20	17	Breathing							
+193	31.16666667	51.33333333	53	Active	Slow	44	21	15	17	15	Breathing							
+194	18.16666667	60.33333333	71.83333333	Sham	Slow	26	14	22	21	22	Breathing							
+195	1	35	70	Active	Control	10	4	4	4	28	Breathing							
+196	0	0	57.16666667	Sham	Control	16	7	19	18	22	Breathing							
+197	16.16666667	78.83333333	76.5	Active	Slow	26	19	18	22	15	Breathing							
+198	8	86.33333333	75.33333333	Sham	Slow	16	9	23	16	28	Breathing							
+199	0.166666667	82	95.66666667	Active	Control	20	5	7	10	25	Breathing							
+200	5	48.33333333	85	Sham	Slow	33	21	24	21	23	Breathing							
+1	6.666666667	65	51.83333333	Active	Slow						Stress	2.75	3.75	4	4.25	3.25	4.125	-0.875
+2	5.666666667	76.5	75	Sham	Slow						Stress	1.25	3.75	3	2.25	2.5	2.625	-0.125
+3	5	77.66666667	67.16666667	Active	Control						Stress	1.5	3.5	4.25	4	2.5	4.125	-1.625
+4	1.666666667	59.16666667	50	Sham	Control						Stress	4.25	4	3.75	4.25	4.125	4	0.125
+5	36.5	54.33333333	39	Active	Slow						Stress	4	3.75	4.25	4.25	3.875	4.25	-0.375
+6	18.16666667	60	76.66666667	Sham	Slow						Stress	3.25	5	3	4.25	4.125	3.625	0.5
+7	1.833333333	32	83.83333333	Active	Control						Stress	1.5	2.75	4.25	4.5	2.125	4.375	-2.25
+8	68.33333333	65	9.833333333	Sham	Control						Stress	5.75	5.5	2.25	4	5.625	3.125	2.5
+9	0	75	71.66666667	Active	Slow						Stress	3.75	3.25	4	3.25	3.5	3.625	-0.125
+10	3.333333333	66.66666667	66.66666667	Sham	Control						Stress	3.75	4	3.75	3.75	3.875	3.75	0.125
+11	18.33333333	40	93.33333333	Active	Control						Stress	3.5	4.25	4.5	4	3.875	4.25	-0.375
+12	48.33333333	51.66666667	50	Sham	Control						Stress	3.75	5	3.75	3.25	4.375	3.5	0.875
+13	42.33333333	22	8.666666667	Active	Slow						Stress	5	4.75	3.25	4.5	4.875	3.875	1
+14	16.66666667	59	46.66666667	Sham	Slow						Stress	3.75	4.75	3.75	3.25	4.25	3.5	0.75
+15	2.666666667	87	86.16666667	Active	Control						Stress	1.75	2.5	5	4.5	2.125	4.75	-2.625
+16	43.5	38.5	45.33333333	Sham	Control						Stress	5.5	4.75	3.25	3.75	5.125	3.5	1.625
+17	49.83333333	40	53	Active	Slow						Stress	4	4.25	3.75	3.75	4.125	3.75	0.375
+18	6.833333333	63.5	61.66666667	Sham	Slow						Stress	2.5	4.75	4	3.75	3.625	3.875	-0.25
+19	3.5	63.33333333	62	Active	Control						Stress	3	4.25	4	4	3.625	4	-0.375
+20	0	70	66.66666667	Sham	Control						Stress	2.75	4	5	4.25	3.375	4.625	-1.25
+21	2.833333333	73	65.16666667	Active	Slow						Stress	2.75	3.75	4.5	4.75	3.25	4.625	-1.375
+22	75	30	14.83333333	Sham	Slow						Stress	4.5	4	3	3.75	4.25	3.375	0.875
+23	35	38.33333333	36.66666667	Active	Control						Stress	4.5	4.5	4.25	5	4.5	4.625	-0.125
+24	60.16666667	50.83333333	29.5	Sham	Control						Stress	3	3.25	4.25	4	3.125	4.125	-1
+25	0.333333333	87.5	99.16666667	Active	Slow						Stress	3.75	4.25	3.75	2.5	4	3.125	0.875
+26	41.66666667	15.16666667	1.833333333	Sham	Slow						Stress	5.25	5.25	2.5	2.25	5.25	2.375	2.875
+27	5.833333333	50.5	63	Active	Control						Stress	1.5	3.75	4.5	3.25	2.625	3.875	-1.25
+28	8.333333333	55	63.33333333	Sham	Control						Stress	4.25	5	2.5	3.25	4.625	2.875	1.75
+29	50	48.33333333	28.33333333	Active	Slow						Stress	4.5	4.25	3.75	3.75	4.375	3.75	0.625
+30	0	63	97.5	Sham	Slow						Stress	3	4.25	4.25	3	3.625	3.625	0
+31	48.33333333	9.833333333	3.166666667	Active	Control						Stress	4.25	4.25	3	3.75	4.25	3.375	0.875
+32	0.166666667	50	60	Sham	Control						Stress	3.5	3.25	3.5	4	3.375	3.75	-0.375
+33	20	33	28.33333333	Active	Slow						Stress	2.25	2.5	4	2.5	2.375	3.25	-0.875
+34	31.66666667	78	78.33333333	Sham	Slow						Stress	3.25	4.25	3.75	4	3.75	3.875	-0.125
+35	31	42.16666667	31.16666667	Active	Control						Stress	4.25	4.75	2.75	5	4.5	3.875	0.625
+36	17.5	48.33333333	63.33333333	Sham	Control						Stress	1.25	2.75	4.75	2.5	2	3.625	-1.625
+37	32.66666667	43.83333333	64.16666667	Active	Slow						Stress	3	3.5	3.75	4.5	3.25	4.125	-0.875
+38	0.5	85.33333333	90.83333333	Sham	Slow						Stress	3.5	5.5	3.75	3	4.5	3.375	1.125
+39	4.666666667	43.5	37.83333333	Active	Control						Stress	1.75	3.75	4	4	2.75	4	-1.25
+40	16.83333333	75	53.33333333	Sham	Control						Stress	4.5	4.25	4.5	4.5	4.375	4.5	-0.125
+41	5.666666667	85.16666667	85	Active	Slow						Stress	2	4	4.25	4	3	4.125	-1.125
+42	70	43.33333333	15	Sham	Slow						Stress	5.75	5.5	3	3.25	5.625	3.125	2.5
+43	5	67.33333333	86.66666667	Active	Control						Stress	2.75	4.5	3.5	4.5	3.625	4	-0.375
+44	34.66666667	53.5	45.83333333	Sham	Control						Stress	5	4.75	3	2	4.875	2.5	2.375
+45	1	53.33333333	60	Active	Slow						Stress	4.5	4	3.75	3	4.25	3.375	0.875
+46	11.66666667	69.16666667	72.33333333	Sham	Slow						Stress	3.75	3.75	4.25	3.75	3.75	4	-0.25
+47	3.333333333	78.16666667	70.66666667	Active	Control						Stress	2	3.5	4	4	2.75	4	-1.25
+48	6.166666667	47.66666667	63.66666667	Sham	Control						Stress	2.5	2.75	5	2.25	2.625	3.625	-1
+49	73.33333333	45	20.66666667	Active	Slow						Stress	6	5.75	3.25	4.25	5.875	3.75	2.125
+50	0	86.66666667	80	Sham	Slow						Stress	4.75	6	3.75	4.25	5.375	4	1.375
+51	19.5	47.33333333	59.83333333	Active	Control						Stress	2.5	4.25	4.25	3.75	3.375	4	-0.625
+52	1.666666667	81.66666667	78	Sham	Control						Stress	3.25	4	4.25	3.25	3.625	3.75	-0.125
+53	10	15	48.33333333	Active	Slow						Stress	3.5	4.25	2.75	2.75	3.875	2.75	1.125
+54	3.5	60.83333333	71.83333333	Sham	Slow						Stress	3.5	4.25	4	3.5	3.875	3.75	0.125
+55	0.166666667	68.83333333	90.16666667	Active	Control						Stress	2	3.75	4	3.75	2.875	3.875	-1
+56	3.333333333	70	66.66666667	Sham	Control						Stress	4	4.75	3.5	4.5	4.375	4	0.375
+57	3.333333333	0	3.333333333	Active	Slow						Stress	5	4	4	2	4.5	3	1.5
+58	0	68.33333333	60	Sham	Slow						Stress	5.25	5	3	2	5.125	2.5	2.625
+60	23.33333333	21.66666667	41.66666667	Sham	Control						Stress	5	4.75	3.5	4.5	4.875	4	0.875
+61	0	74.33333333	68.5	Active	Slow						Stress	3	3.5	5.25	3.75	3.25	4.5	-1.25
+62	0.166666667	73.16666667	77.16666667	Sham	Slow						Stress	3.25	4.25	4.25	3.75	3.75	4	-0.25
+63	6.166666667	54.33333333	64.33333333	Active	Control						Stress	4.25	4.75	3.5	3.75	4.5	3.625	0.875
+64	3.333333333	70.83333333	57.66666667	Sham	Control						Stress	3.75	3.75	3.75	3.25	3.75	3.5	0.25
+65	18.33333333	56.83333333	45	Active	Slow						Stress	4	4.5	3.25	2.5	4.25	2.875	1.375
+66	0	78.33333333	75	Sham	Slow						Stress	3	3.75	4.25	2.25	3.375	3.25	0.125
+67	0	45	59.66666667	Active	Control						Stress	3.75	4.75	3.75	2.25	4.25	3	1.25
+68	26.66666667	56.33333333	80.5	Sham	Control						Stress	4.25	3.75	3.5	4.25	4	3.875	0.125
+69	90	0	0	Active	Slow						Stress	5	4.25	1.75	3.25	4.625	2.5	2.125
+70	25	66.83333333	51	Sham	Slow						Stress	4.5	4	3.75	3	4.25	3.375	0.875
+71	19	70.83333333	69.83333333	Active	Control						Stress	3.5	4	3	3.5	3.75	3.25	0.5
+72	13.5	49.16666667	34.5	Sham	Control						Stress	4.25	4	4.5	3.5	4.125	4	0.125
+73	38.33333333	9.833333333	48.5	Active	Slow						Stress	4.25	5.5	2.5	3.25	4.875	2.875	2
+74	27.5	50.33333333	56	Sham	Slow						Stress	3.75	4	3.75	5	3.875	4.375	-0.5
+75	11.66666667	50	51.5	Active	Control						Stress	3.5	4	3.5	2.25	3.75	2.875	0.875
+76	0	60.16666667	66.66666667	Sham	Control						Stress	2.75	4.25	3.5	2.75	3.5	3.125	0.375
+77	3.333333333	86.66666667	85	Active	Slow						Stress	4.5	4.75	4.5	4.25	4.625	4.375	0.25
+78	25.16666667	44.83333333	47.83333333	Sham	Slow						Stress	3	3.5	3.5	2.75	3.25	3.125	0.125
+79	20.16666667	58.66666667	46.66666667	Active	Control						Stress	3	4.5	3.5	2.5	3.75	3	0.75
+80	8.833333333	65.5	44.66666667	Sham	Control						Stress	2.5	3.25	4	3.5	2.875	3.75	-0.875
+81	55.16666667	20	28.5	Active	Slow						Stress	4.5	4.25	3.5	3.5	4.375	3.5	0.875
+82	11.83333333	55.83333333	66.66666667	Sham	Slow						Stress	2.25	3	3.5	1	2.625	2.25	0.375
+83	25.5	48.33333333	61	Active	Control						Stress	3.75	3	4.75	2.75	3.375	3.75	-0.375
+84	46.5	69.83333333	47.66666667	Sham	Control						Stress	3.75	3.75	4.5	3.75	3.75	4.125	-0.375
+85	18.33333333	59	50	Active	Slow						Stress	4.5	5.25	3.25	4.5	4.875	3.875	1
+86	1	79.33333333	80.16666667	Sham	Slow						Stress	2	3.25	3.75	3.75	2.625	3.75	-1.125
+87	55.5	47.66666667	33.33333333	Active	Control						Stress	4.25	4.5	3.25	3.5	4.375	3.375	1
+88	0	85	86.66666667	Sham	Control						Stress	2.5	4	4.25	4	3.25	4.125	-0.875
+89	45	68.16666667	50.16666667	Active	Slow						Stress	2.75	3	3.75	4.5	2.875	4.125	-1.25
+90	0	23.16666667	80.16666667	Sham	Slow						Stress	3.25	4.25	4	2.25	3.75	3.125	0.625
+91	65.16666667	30.16666667	30	Active	Control						Stress	4.5	4.25	3.5	3	4.375	3.25	1.125
+92	16.33333333	62.5	50.83333333	Sham	Control						Stress	3	4.25	4	4	3.625	4	-0.375
+93	56	13.83333333	40.16666667	Active	Slow						Stress	6	4.5	1.75	3.75	5.25	2.75	2.5
+94	4.833333333	57	68	Sham	Slow						Stress	3.25	4.75	3.75	4	4	3.875	0.125
+95	1.666666667	82.33333333	81.83333333	Active	Control						Stress	5	5	4	5.25	5	4.625	0.375
+96	0	63.16666667	76.16666667	Sham	Control						Stress	4	4.75	3.5	4	4.375	3.75	0.625
+97	39.83333333	71.33333333	68	Active	Slow						Stress	6	5.5	3.75	4.5	5.75	4.125	1.625
+98	5	66.66666667	75	Sham	Slow						Stress	4.25	4.75	3	2.75	4.5	2.875	1.625
+99	0	91.66666667	86.66666667	Active	Control						Stress	4.5	3.75	2.75	3	4.125	2.875	1.25
+100	33.33333333	10	15	Sham	Control						Stress	4.5	4.5	3.25	3.5	4.5	3.375	1.125
+101	7.166666667	59.83333333	76.33333333	Active	Slow						Stress	2.75	4	4	3.5	3.375	3.75	-0.375
+102	11.83333333	76.33333333	82.16666667	Sham	Slow						Stress	3	4.25	4.5	4.5	3.625	4.5	-0.875
+103	12	45	12.83333333	Active	Control						Stress	6	5.75	4	4	5.875	4	1.875
+104	34.16666667	48.83333333	31.83333333	Sham	Control						Stress	5	5.5	3	4.25	5.25	3.625	1.625
+105	0	94.5	100	Active	Slow						Stress	2.5	2.75	4	2.25	2.625	3.125	-0.5
+106	42.66666667	54.16666667	51.33333333	Sham	Slow						Stress	5	5	2.75	3.25	5	3	2
+107	8.5	60	68.16666667	Active	Control						Stress	4	5	3.75	3.75	4.5	3.75	0.75
+108	4.333333333	77.83333333	85.33333333	Sham	Control						Stress	4.5	4.25	4	4.25	4.375	4.125	0.25
+109	29.16666667	60	45.66666667	Active	Slow						Stress	3	3.25	3.25	3.25	3.125	3.25	-0.125
+110	46.5	66.66666667	60.16666667	Sham 	Slow						Stress	5	4.25	3.75	4.75	4.625	4.25	0.375
+111	0	97	93	Active	Control						Stress	3.5	3.75	3.5	3.5	3.625	3.5	0.125
+112	5	70	70.66666667	Sham	Control						Stress	3.75	3.5	4.5	4.25	3.625	4.375	-0.75
+114	30.83333333	60	58.16666667	Sham	Slow						Stress	3.75	4.25	3.5	4	4	3.75	0.25
+115	0	89.5	97.83333333	Active	Control						Stress	2	4.5	3.5	2	3.25	2.75	0.5
+116	33.33333333	66.66666667	60	Sham	Control						Stress	3	3.75	4.25	4	3.375	4.125	-0.75
+117	3.166666667	18.16666667	67	Active 	Slow						Stress	3.25	4	3.5	3.75	3.625	3.625	0
+118	1.666666667	75.16666667	69.33333333	Sham	Slow						Stress	2.75	4	3.25	4.75	3.375	4	-0.625
+119	0	78.33333333	88.33333333	Active	Control						Stress	3.25	3.5	4	2	3.375	3	0.375
+120	15	68.33333333	74.5	Sham	Control						Stress	3.75	4	4	2	3.875	3	0.875
+121	26.83333333	68.33333333	64.83333333	Active	Slow						Stress	3.5	3.5	3.5	2.5	3.5	3	0.5
+122	0.833333333	71.16666667	66.83333333	Sham	Slow						Stress	2.5	2.25	3	1.5	2.375	2.25	0.125
+123	41.66666667	46.5	36.66666667	Active	Control						Stress	5.75	4.25	4.5	5.25	5	4.875	0.125
+124	0	55.33333333	69.83333333	Sham	Control						Stress	4.25	4	3.5	4	4.125	3.75	0.375
+125	35.16666667	0.666666667	31.5	Active	Slow						Stress	3.5	5.25	4.25	4.25	4.375	4.25	0.125
+126	7	70.5	79.83333333	Sham	Slow						Stress	1.5	4.25	3.75	3.75	2.875	3.75	-0.875
+127	21.66666667	60	51.66666667	Active	Control						Stress	4	4.5	4	3.25	4.25	3.625	0.625
+128	38.66666667	68.66666667	41.66666667	Sham	Control						Stress	4	4.25	4.25	4.25	4.125	4.25	-0.125
+129	8.166666667	44.66666667	41.83333333	Active	Slow						Stress	3.5	4.25	4.25	3.25	3.875	3.75	0.125
+130	10	73.33333333	71.66666667	Sham	Slow						Stress	1.75	3.75	4.75	3.25	2.75	4	-1.25
+131	21.66666667	71.16666667	77.5	Active	Control						Stress	2.5	4	3.75	2.75	3.25	3.25	0
+132	38.83333333	61.66666667	70	Sham	Control						Stress	3.75	4.75	4.25	3.25	4.25	3.75	0.5
+133	8.333333333	18.33333333	35	Active	Slow						Stress	3.5	4	3.5	4.75	3.75	4.125	-0.375
+134	18.33333333	74.16666667	75.83333333	Sham	Slow						Stress	3.5	3.75	4	3.25	3.625	3.625	0
+135	18.33333333	54.5	53.66666667	Active	Control						Stress	3.75	4.25	3.25	3.75	4	3.5	0.5
+136	40.66666667	58.33333333	50	Sham	Control						Stress	5	5	3.75	2	5	2.875	2.125
+137	51	69.83333333	46.66666667	Active	Slow						Stress	3.75	4.25	3.75	4.25	4	4	0
+138	47.83333333	54.66666667	53.66666667	Sham	Slow						Stress	3.75	4	2.5	2.25	3.875	2.375	1.5
+139	31.83333333	64.16666667	57.83333333	Active	Control						Stress	4.5	4.75	3.25	4	4.625	3.625	1
+140	5	80	83.33333333	Sham	Control						Stress	4.5	5.25	4.5	4.25	4.875	4.375	0.5
+141	6.666666667	73.33333333	55.5	Active	Slow						Stress	4.5	5	4.75	2.75	4.75	3.75	1
+142	17.5	75.16666667	70	Sham	Slow						Stress	4.5	4.5	4.5	3.75	4.5	4.125	0.375
+143	14.83333333	45.16666667	53.16666667	Active	Control						Stress	3.5	3.5	3.5	4.25	3.5	3.875	-0.375
+144	0	80	61	Sham	Control						Stress	3.75	4	4.25	3.25	3.875	3.75	0.125
+145	8	44.5	50.16666667	Active	Slow						Stress	2.5	3.25	4.25	3.5	2.875	3.875	-1
+146	3.666666667	57.16666667	40.5	Sham	Slow						Stress	3.75	4	3.5	3	3.875	3.25	0.625
+147	10	38.16666667	76.66666667	Sham	Control						Stress	3.25	4.5	3.5	3.5	3.875	3.5	0.375
+148	46.5	0	0	Sham	Control						Stress	4.75	3.5	3.25	5	4.125	4.125	0
+149	6.333333333	71.66666667	73.5	Active	Slow						Stress	2.25	3	4	3	2.625	3.5	-0.875
+150	0	77.83333333	82.16666667	Sham	Slow						Stress	1	4.75	3.5	2.5	2.875	3	-0.125
+151	10	81.66666667	75	Active	Control						Stress	4.25	4.5	3.75	3.5	4.375	3.625	0.75
+152	56.33333333	41.5	37.33333333	Sham	Control						Stress	4.75	5	3.5	4	4.875	3.75	1.125
+153	6	42.66666667	63.5	Active	Slow						Stress	4	3.75	3.75	4.5	3.875	4.125	-0.25
+154	6.333333333	72.83333333	67	Sham	Slow						Stress	2.5	3.25	4.25	3.25	2.875	3.75	-0.875
+155	39.33333333	64.33333333	40.83333333	Active	Control						Stress	5.25	4.75	3.5	4.25	5	3.875	1.125
+156	10	45	26.66666667	Sham	Control						Stress	5	5.5	4	5	5.25	4.5	0.75
+157	30.16666667	45.83333333	39.83333333	Active	Slow						Stress	3	3.5	4.5	4.25	3.25	4.375	-1.125
+158	10	53.33333333	33.33333333	Sham	Slow						Stress	4	4.25	4.75	4	4.125	4.375	-0.25
+159	5	13.16666667	63.5	Active	Control						Stress	3	3.5	3.5	3.5	3.25	3.5	-0.25
+160	1.833333333	66.66666667	52.5	Sham	Control						Stress	4.25	3	3.25	3.25	3.625	3.25	0.375
+161	28.33333333	30	46.66666667	Active	Slow						Stress	2.25	4.25	3.75	4.25	3.25	4	-0.75
+162	0	81.33333333	83	Sham	Slow						Stress	4	4	4.25	3.5	4	3.875	0.125
+163	0	85.33333333	89	Active	Control						Stress	3.75	4.25	4.75	4.5	4	4.625	-0.625
+164	0	91.5	89	Sham	Control						Stress	2.75	4	3.75	3.5	3.375	3.625	-0.25
+165	21.83333333	58.33333333	23.33333333	Active	Control						Stress	5.25	5	2.5	4.25	5.125	3.375	1.75
+166	31.66666667	8.333333333	21.66666667	Sham	Slow						Stress	4.25	3.75	2.75	2.75	4	2.75	1.25
+167	2.166666667	49.83333333	74.16666667	Active	Control						Stress	3.25	3.5	4.5	4.75	3.375	4.625	-1.25
+168	0	58.33333333	70.83333333	Sham	Control						Stress	3.75	3	4	3.25	3.375	3.625	-0.25
+169	55.5	6.5	0.666666667	Active	Slow						Stress	5	3.5	3.5	5.5	4.25	4.5	-0.25
+170	47.5	37.5	36.66666667	Sham 	Slow						Stress	3.5	4	3.75	3.75	3.75	3.75	0
+171	0	76.66666667	63.5	Active	Control						Stress	3.5	3.25	3.75	2.75	3.375	3.25	0.125
+172	6.833333333	76.5	65.66666667	Sham	Control						Stress	5.5	5	3	3	5.25	3	2.25
+173	0.166666667	80	68.83333333	Active	Slow						Stress	3.75	4.5	2.5	3.25	4.125	2.875	1.25
+174	23.33333333	60	38.33333333	Active	Control						Stress	3.75	4.5	4	4.75	4.125	4.375	-0.25
+175	43.33333333	55.83333333	60.16666667	Active	Slow						Stress	3.5	4.25	4.5	3.75	3.875	4.125	-0.25
+176	1.666666667	73.33333333	70	Sham	Control						Stress	2.25	3	4	2.25	2.625	3.125	-0.5
+177	21.66666667	66.5	55	Active	Slow						Stress	2.75	3.5	4.75	2.75	3.125	3.75	-0.625
+178	0	53.5	54.5	Sham	Slow						Stress	2.75	5	4.5	4.25	3.875	4.375	-0.5
+179	34.83333333	60.83333333	63.5	Active	Control						Stress	3	4.75	4	4	3.875	4	-0.125
+180	63.83333333	45.33333333	22.16666667	Sham	Control						Stress	4	3.75	3.25	4.25	3.875	3.75	0.125
+181	0	40.66666667	60.16666667	Active	Slow						Stress	3.75	4.25	4.25	4.5	4	4.375	-0.375
+182	9	71.33333333	79.33333333	Sham	Slow						Stress	2.25	4.75	4.25	3.75	3.5	4	-0.5
+183	15.5	84.83333333	85.16666667	Active	Control						Stress	5	4.5	2	3	4.75	2.5	2.25
+184	15	56.66666667	21.66666667	Sham	Control						Stress	3.75	3	3	3	3.375	3	0.375
+185	47.66666667	42.16666667	13.83333333	Active	Slow						Stress	4.25	5	2.5	4	4.625	3.25	1.375
+186	1.666666667	65.16666667	60	Sham	Slow						Stress	2	4.25	4.25	4	3.125	4.125	-1
+187	25	53.33333333	66.83333333	Active	Control						Stress	3.75	5	4.5	3.5	4.375	4	0.375
+188	6.166666667	62	57.33333333	Sham	Control						Stress	2	4	4.25	4	3	4.125	-1.125
+189	10.33333333	21.5	67.16666667	Active	Slow						Stress	2	3.25	4.5	3	2.625	3.75	-1.125
+190	9.166666667	51.5	40	Sham	Slow						Stress	2	3.25	3.75	2	2.625	2.875	-0.25
+191	13.83333333	90.5	56.5	Active	Control						Stress	3.25	4	4.5	4	3.625	4.25	-0.625
+192	28.33333333	30	68.33333333	Sham	Control						Stress	4.25	4.5	2.75	3.25	4.375	3	1.375
+193	47.33333333	63.16666667	42	Active	Slow						Stress	3.75	4	5	3.5	3.875	4.25	-0.375
+194	15.33333333	70	52.5	Sham	Slow						Stress	4	4.25	4.5	4.75	4.125	4.625	-0.5
+195	1.833333333	62.66666667	50.66666667	Active	Control						Stress	1.25	4	3.75	4	2.625	3.875	-1.25
+196	33	0	8.833333333	Sham	Control						Stress	4.5	3.5	4	3.5	4	3.75	0.25
+197	60	75	78.5	Active	Slow						Stress	2.75	4.25	4	3.5	3.5	3.75	-0.25
+198	3.166666667	92	87.5	Sham	Slow						Stress	2.75	3.25	4.5	3.5	3	4	-1
+199	6.666666667	84.66666667	83.66666667	Active	Control						Stress	2.25	4	3.5	5.5	3.125	4.5	-1.375
+200	65	50	21.66666667	Sham	Slow						Stress	5	4.75	4.25	4.75	4.875	4.5	0.375
+1	1.666666667	15	22.33333333	Active	Slow	38	4	8	15	9	SART							
+2	0	53.5	77	Sham	Slow	15	4	4	10	27	SART							
+3	0.333333333	71.16666667	75.33333333	Active	Control	42	18	14	21	17	SART							
+4	0	35	75.16666667	Sham	Control	9	6	5	8	20	SART							
+5	3.333333333	69.16666667	61.66666667	Active	Slow	22	9	20	26	12	SART							
+7	10.16666667	51.66666667	80.33333333	Active	Control	35	19	24	23	21	SART							
+8	30	66.83333333	38.33333333	Sham	Control	39	23	11	24	17	SART							
+9	0	46.66666667	66.66666667	Active	Slow	20	4	20	15	16	SART							
+10	0	75	83.33333333	Sham	Control	27	9	23	26	21	SART							
+11	0	50	98.33333333	Active	Control	21	4	23	23	20	SART							
+12	15	63.33333333	60	Sham	Control	29	16	22	11	9	SART							
+13	43.33333333	11.5	1.666666667	Active	Slow	58	13	17	14	19	SART							
+14	2	55.5	46.33333333	Sham	Slow	17	5	17	20	14	SART							
+15	0	87	85	Active	Control	3	4	4	4	4	SART							
+16	7.666666667	58.5	58.66666667	Sham	Control	17	6	15	23	15	SART							
+17	15.66666667	46.83333333	79.83333333	Active	Slow	28	6	10	13	24	SART							
+18	22	58.83333333	57.83333333	Sham	Slow	42	19	19	26	23	SART							
+19	0.333333333	66.83333333	73.83333333	Active	Control	8	5	5	14	20	SART							
+20	3.333333333	71.66666667	70	Sham	Control	3	4	20	20	9	SART							
+21	3	47.16666667	82.33333333	Active	Slow	26	5	20	25	22	SART							
+22	55	34.66666667	5.166666667	Sham	Slow	48	14	10	13	14	SART							
+23	10.33333333	44.5	44.66666667	Active	Control	30	11	16	20	19	SART							
+24	27.66666667	29.66666667	10.66666667	Sham	Control	0	4	4	8	4	SART							
+25	0	87.83333333	99.83333333	Active	Slow	0	8	23	20	21	SART							
+26	0	15	43.33333333	Sham	Slow	37	9	4	4	23	SART							
+27	2	54.83333333	61.66666667	Active	Control	18	12	12	19	15	SART							
+28	5	40	41.66666667	Sham	Control	39	9	14	18	18	SART							
+29	35	32.5	42	Active	Slow	28	18	9	9	21	SART							
+30	0	51.66666667	97.5	Sham	Slow	0	4	17	17	28	SART							
+31	9	4	43	Active	Control	28	13	18	16	15	SART							
+32	0.166666667	30	67.83333333	Sham	Control	17	11	20	20	16	SART							
+33	5	9.833333333	18.5	Active	Slow	33	9	11	16	17	SART							
+34	3.333333333	85.16666667	86.66666667	Sham	Slow	42	19	13	21	19	SART							
+35	2	72.66666667	75.33333333	Active	Control	15	17	19	17	15	SART							
+36	15	41.66666667	35	Sham	Control	31	8	19	18	23	SART							
+37	18.33333333	55.16666667	73.16666667	Active	Slow	12	6	23	23	19	SART							
+38	1.833333333	68.66666667	86.5	Sham	Slow	5	4	19	18	23	SART							
+39	1.666666667	33.5	64.5	Active	Control	39	9	12	13	24	SART							
+40	12.33333333	33.33333333	68.33333333	Sham	Control	30	10	23	21	21	SART							
+41	3.166666667	82.83333333	84.16666667	Active	Slow	36	15	21	20	20	SART							
+42	7.666666667	23.16666667	50.5	Sham	Slow	58	22	11	19	19	SART							
+43	2.5	50.83333333	75.5	Active	Control	35	9	18	19	18	SART							
+44	25.5	55.16666667	60.33333333	Sham	Control	11	17	20	21	10	SART							
+45	0	60	71.66666667	Active	Slow	17	4	4	16	28	SART							
+46	3.666666667	63.16666667	64.83333333	Sham	Slow	22	11	20	23	19	SART							
+47	0	59.5	68.16666667	Active	Control	28	8	7	14	16	SART							
+48	0	7.5	46.16666667	Sham	Control	25	11	19	16	19	SART							
+49	45	48.33333333	65.33333333	Active	Slow	41	16	19	17	13	SART							
+50	0	60	81.66666667	Sham	Slow	6	5	22	25	8	SART							
+51	7.333333333	13.5	84.33333333	Active	Control	13	11	17	22	24	SART							
+52	0.166666667	65	83.33333333	Sham	Control	21	4	21	11	24	SART							
+53	0	0	63.33333333	Active	Slow	26	6	16	19	17	SART							
+54	0	65.16666667	78.5	Sham	Slow	13	8	15	20	21	SART							
+55	0	64.33333333	86	Active	Control	21	5	19	18	18	SART							
+56	0	66.66666667	70	Sham	Control	19	6	20	17	23	SART							
+57	0	0	48.5	Active	Slow	7	4	28	28	23	SART							
+58	0	26.5	56.66666667	Sham	Slow	26	9	10	17	14	SART							
+60	0	16.66666667	71.66666667	Sham	Control	0	4	13	10	28	SART							
+61	0	71.5	75.16666667	Active	Slow	13	4	28	28	13	SART							
+62	1.166666667	65.5	81.66666667	Sham	Slow	23	4	18	18	23	SART							
+63	7	39.5	54.66666667	Active	Control	41	13	14	21	13	SART							
+64	3.333333333	60	52.66666667	Sham	Control	19	4	6	12	24	SART							
+65	10	9.666666667	29.83333333	Active	Slow	25	6	10	15	15	SART							
+66	0	76.66666667	90	Sham	Slow	10	7	19	19	24	SART							
+68	6.833333333	30.66666667	82.66666667	Sham	Control	24	14	21	11	24	SART							
+70	0	44.33333333	72.16666667	Sham	Slow	27	8	9	21	20	SART							
+71	19.5	78	74.16666667	Active	Control	11	7	19	14	21	SART							
+72	0	37.33333333	25.83333333	Sham	Control	0	4	4	4	4	SART							
+73	0.166666667	1.333333333	40.16666667	Active	Slow	28	9	25	15	27	SART							
+74	2.166666667	33.16666667	65.33333333	Sham	Slow	40	8	12	7	23	SART							
+75	1.5	42.16666667	60.83333333	Active	Control	17	8	24	25	12	SART							
+76	0	36.83333333	79.66666667	Sham	Control	47	5	22	22	16	SART							
+77	0	90.16666667	88.33333333	Active	Slow	5	4	16	22	16	SART							
+78	20.33333333	58	65.83333333	Sham	Slow	23	15	11	4	23	SART							
+79	8.833333333	70.16666667	81.33333333	Active	Control	11	7	24	23	15	SART							
+80	0.666666667	74.5	59.83333333	Sham	Control	3	7	15	15	5	SART							
+81	5	44.83333333	61.66666667	Active	Slow	25	7	12	21	22	SART							
+82	2	60	58.66666667	Sham	Slow	10	6	17	10	22	SART							
+83	11.66666667	39	65.5	Active	Control	18	12	16	21	21	SART							
+84	14	60.5	56.5	Sham	Control	23	5	17	19	20	SART							
+85	3.333333333	61.16666667	69.83333333	Active	Slow	16	13	25	25	21	SART							
+86	0	79	75.83333333	Sham	Slow	10	10	15	20	16	SART							
+87	35.33333333	43.33333333	54.33333333	Active	Control	35	12	19	18	17	SART							
+88	0	57.83333333	82.33333333	Sham	Control	27	6	15	14	22	SART							
+89	3.333333333	28.66666667	70.5	Active	Slow	48	14	20	24	23	SART							
+90	0	12.66666667	74.83333333	Sham	Slow	25	15	16	15	22	SART							
+91	25	45.33333333	63.66666667	Active	Control	32	6	16	18	17	SART							
+92	12.33333333	65.16666667	70.33333333	Sham	Control	35	12	20	16	18	SART							
+93	5.666666667	49.16666667	74.5	Active	Slow	15	4	8	12	23	SART							
+94	1.5	57.66666667	61	Sham	Slow	15	5	8	9	22	SART							
+95	0	81.83333333	86	Active	Control	8	11	5	21	9	SART							
+96	0	59.83333333	89.33333333	Sham	Control	36	8	13	20	18	SART							
+97	6.333333333	72.16666667	80.16666667	Active	Slow	42	10	16	26	20	SART							
+98	2.5	53.66666667	68.5	Sham	Slow	34	4	12	20	10	SART							
+99	0	86.66666667	97.66666667	Active	Control	7	5	25	22	24	SART							
+100	18.33333333	18.33333333	28.33333333	Sham	Control	41	19	10	13	13	SART							
+101	6	45.66666667	75.5	Active	Slow	9	6	7	21	23	SART							
+102	0	76.33333333	87.66666667	Sham	Slow	19	4	25	24	16	SART							
+103	0	27.83333333	74.16666667	Active	Control	0	4	13	7	28	SART							
+104	7	40	38.33333333	Sham	Control	27	15	14	17	16	SART							
+105	0.5	75.66666667	91.5	Active	Slow	30	8	17	21	24	SART							
+106	36.66666667	49.5	63.83333333	Sham	Slow	39	19	20	21	21	SART							
+107	8.166666667	61.83333333	75.5	Active	Control	39	10	8	12	21	SART							
+108	3.833333333	64	83.33333333	Sham	Control	9	4	4	4	4	SART							
+109	25	53.66666667	48.5	Active	Slow	32	12	12	11	19	SART							
+110	6.666666667	71.66666667	70	Sham 	Slow	40	23	19	19	20	SART							
+111	0.833333333	94.83333333	94.5	Active	Control	15	4	20	19	22	SART							
+112	11.66666667	47.5	61	Sham	Control	41	23	4	9	16	SART							
+114	21.5	60	58.33333333	Sham	Slow	12	14	19	19	21	SART							
+115	0	82.16666667	97.5	Active	Control	11	4	28	6	15	SART							
+116	10	61.66666667	70	Sham	Control	18	8	20	22	17	SART							
+117	0	27	68.83333333	Active 	Slow	18	15	16	16	19	SART							
+118	0	79.16666667	82.33333333	Sham	Slow	25	8	6	20	21	SART							
+119	0	76.66666667	90	Active	Control	5	4	13	7	24	SART							
+120	8.333333333	67.66666667	68.83333333	Sham	Control	17	5	20	21	26	SART							
+121	0	79.83333333	80	Active	Slow	4	4	22	22	22	SART							
+122	0.333333333	58.66666667	65.16666667	Sham	Slow	19	4	11	6	7	SART							
+123	10	28.33333333	54.16666667	Active	Control	36	19	10	18	18	SART							
+124	0	37.5	51.16666667	Sham	Control	11	6	8	6	20	SART							
+125	0.5	12.83333333	81.66666667	Active	Slow	39	21	10	26	11	SART							
+126	5.333333333	78.33333333	79	Sham	Slow	3	5	23	24	19	SART							
+127	0	61.66666667	90.33333333	Active	Control	0	4	24	4	24	SART							
+128	8.333333333	55	65	Sham	Control	24	17	17	25	16	SART							
+129	7.833333333	23.16666667	66.33333333	Active	Slow	18	7	10	8	26	SART							
+130	0	66.66666667	71.66666667	Sham	Slow	0	4	28	28	10	SART							
+131	4.833333333	81.83333333	70.33333333	Active	Control	1	8	26	28	23	SART							
+132	15.16666667	55	65	Sham	Control	36	20	22	20	22	SART							
+133	0	50.66666667	50	Active	Slow	20	5	15	13	22	SART							
+134	15	23.33333333	61.83333333	Sham	Slow	22	9	24	25	9	SART							
+135	7.666666667	55.16666667	60.33333333	Active	Control	17	9	15	18	16	SART							
+136	16.66666667	60	59.33333333	Sham	Control	22	20	18	21	25	SART							
+137	49.83333333	68.33333333	50	Active	Slow	22	12	18	18	20	SART							
+138	29.16666667	63.33333333	76.33333333	Sham	Slow	26	13	14	17	19	SART							
+139	1.666666667	77.16666667	89.16666667	Active	Control	43	12	12	24	17	SART							
+140	1.666666667	80	85	Sham	Control	10	6	22	18	19	SART							
+141	0.333333333	46.66666667	60.33333333	Active	Slow	19	9	12	14	13	SART							
+142	6.5	54.83333333	62	Sham	Slow	23	7	18	24	24	SART							
+143	11.33333333	46.33333333	49.5	Active	Control	28	13	18	20	18	SART							
+144	0.5	22.16666667	55.83333333	Sham	Control	37	14	19	19	20	SART							
+145	5.833333333	42	49.83333333	Active	Slow	19	8	19	18	20	SART							
+146	11.66666667	8	74.33333333	Sham	Slow	44	13	12	19	20	SART							
+147	0	68.33333333	88.16666667	Sham	Control	14	5	16	8	24	SART							
+148	0	0	15	Sham	Control	23	4	24	20	24	SART							
+149	0.166666667	72.83333333	76	Active	Slow	16	20	14	18	18	SART							
+150	0	77.66666667	85	Sham	Slow	17	4	18	15	24	SART							
+151	10	73.33333333	81.66666667	Active	Control	38	11	22	19	20	SART							
+152	47.83333333	15	40	Sham	Control	40	19	12	11	18	SART							
+153	2.166666667	43.33333333	59	Active	Slow	11	4	4	11	16	SART							
+154	0	69	81	Sham	Slow	8	4	6	5	22	SART							
+155	14.16666667	28.66666667	14.83333333	Active	Control	27	4	9	22	14	SART							
+156	1.666666667	53.33333333	73.33333333	Sham	Control	33	23	11	24	23	SART							
+157	18.33333333	16.66666667	50.16666667	Active	Slow	30	10	16	18	17	SART							
+158	0	40	51.66666667	Sham	Slow	40	12	8	6	28	SART							
+159	1.666666667	3.833333333	63.33333333	Active	Control	42	13	13	12	25	SART							
+160	1.166666667	71.33333333	59.83333333	Sham	Control	29	15	14	17	20	SART							
+161	6.666666667	23.33333333	58.33333333	Active	Slow	28	11	8	10	22	SART							
+162	0	71.5	83.16666667	Sham	Slow	18	5	22	19	22	SART							
+163	0	83	87.5	Active	Control	4	4	14	4	14	SART							
+164	0.166666667	61	75.83333333	Sham	Control	37	10	23	11	14	SART							
+165	14.83333333	63.33333333	28.33333333	Active	Control	7	8	13	15	17	SART							
+166	10	0	70	Sham	Slow	21	4	9	14	26	SART							
+167	0	32.83333333	72.5	Active	Control	7	8	27	19	23	SART							
+168	0.666666667	55.83333333	65.5	Sham	Control	3	9	11	12	20	SART							
+169	0	20	71.66666667	Active	Slow	34	4	4	14	26	SART							
+170	19.16666667	32.83333333	47.66666667	Sham 	Slow	23	7	11	11	12	SART							
+171	0.166666667	71.66666667	73.33333333	Active	Control	40	7	15	23	21	SART							
+172	4	81.83333333	71.16666667	Sham	Control	24	6	24	11	23	SART							
+173	0.166666667	68.83333333	81	Active	Slow	39	17	21	24	14	SART							
+174	1.666666667	66.66666667	86.66666667	Active	Control	26	19	23	25	24	SART							
+175	21.16666667	54.33333333	85.16666667	Active	Slow	12	7	13	18	24	SART							
+176	0	50	71.5	Sham	Control	11	4	7	9	17	SART							
+177	8.166666667	67.5	75.66666667	Active	Slow	16	15	18	21	15	SART							
+178	0	19.33333333	53.83333333	Sham	Slow	23	7	18	22	18	SART							
+179	14.5	76.33333333	77.83333333	Active	Control	14	14	24	24	22	SART							
+180	11.5	29.83333333	68.16666667	Sham	Control	33	19	24	26	17	SART							
+181	0	23	54.83333333	Active	Slow	23	12	19	21	15	SART							
+182	4.166666667	42.33333333	86.5	Sham	Slow	11	5	19	19	24	SART							
+183	0	83.33333333	87.16666667	Active	Control	8	19	18	28	19	SART							
+184	3.333333333	28.33333333	24.16666667	Sham	Control	30	15	10	12	19	SART							
+185	52.5	17.83333333	4	Active	Slow	53	8	18	17	16	SART							
+186	0	58.33333333	68.33333333	Sham	Slow	19	4	7	16	17	SART							
+187	1.666666667	41.66666667	83.33333333	Active	Control	19	6	14	28	26	SART							
+188	6.5	39	54.33333333	Sham	Control	15	4	23	28	26	SART							
+189	15	24.83333333	68.16666667	Active	Slow	12	5	8	17	17	SART							
+190	8.333333333	43.33333333	40	Sham	Slow	22	8	11	23	15	SART							
+191	4	83.33333333	68.66666667	Active	Control	26	9	26	21	21	SART							
+192	11.66666667	38.33333333	71.66666667	Sham	Control	37	10	8	23	12	SART							
+193	47.33333333	50	45.66666667	Active	Slow	36	21	16	16	18	SART							
+194	20.5	48	67.16666667	Sham	Slow	34	9	16	21	18	SART							
+195	0.166666667	44.66666667	58.33333333	Active	Control	16	7	9	15	26	SART							
+196	0	9.833333333	49.66666667	Sham	Control	14	8	16	11	20	SART							
+197	63.16666667	65	71.5	Active	Slow	45	20	20	20	20	SART							
+198	2.5	94.33333333	90.5	Sham	Slow	12	9	20	18	25	SART							
+199	0	75.83333333	91	Active	Control	29	7	8	10	24	SART							
+200	15	38.33333333	76.66666667	Sham	Slow	30	20	23	21	22	SART							
+1	0	30.16666667	44.16666667	Active	Slow	20	4	9	10	11	PassiveViewing							
+2	0	46.66666667	64.33333333	Sham	Slow	19	4	4	7	20	PassiveViewing							
+3	8.833333333	67.16666667	69.66666667	Active	Control	11	12	14	15	16	PassiveViewing							
+4	12.33333333	49	38.33333333	Sham	Control	19	4	5	25	7	PassiveViewing							
+5	49.16666667	67.16666667	58.66666667	Active	Slow	27	7	13	23	15	PassiveViewing							
+7	20.16666667	44.83333333	68.33333333	Active	Control	25	13	18	22	19	PassiveViewing							
+8	15	75	40	Sham	Control	11	12	12	28	19	PassiveViewing							
+9	36.66666667	31.33333333	48.16666667	Active	Slow	24	4	11	21	14	PassiveViewing							
+11	0	60	94	Active	Control	22	4	17	23	23	PassiveViewing							
+12	31.66666667	61.66666667	59.83333333	Sham	Control	29	12	24	22	8	PassiveViewing							
+13	85	0.5	0	Active	Slow	40	12	7	10	11	PassiveViewing							
+14	6.666666667	42.66666667	53.16666667	Sham	Slow	18	4	11	20	17	PassiveViewing							
+15	1.166666667	84.66666667	92.66666667	Active	Control	3	4	23	14	23	PassiveViewing							
+16	53.83333333	36	59	Sham	Control	26	8	10	14	19	PassiveViewing							
+17	49.16666667	42.16666667	49.16666667	Active	Slow	30	4	10	21	12	PassiveViewing							
+18	65.33333333	56.83333333	60	Sham	Slow	8	4	19	19	25	PassiveViewing							
+19	5.333333333	60.5	57.83333333	Active	Control	7	4	11	18	20	PassiveViewing							
+20	1.666666667	58.33333333	50	Sham	Control	6	4	21	21	12	PassiveViewing							
+21	0.666666667	54.5	90.83333333	Active	Slow	24	5	15	14	22	PassiveViewing							
+22	23.33333333	15.16666667	7	Sham	Slow	32	9	10	22	23	PassiveViewing							
+23	15	40	52.5	Active	Control	24	8	12	12	20	PassiveViewing							
+24	27.83333333	14.83333333	19.66666667	Sham	Control	0	4	7	6	4	PassiveViewing							
+25	0.666666667	78.5	90.83333333	Active	Slow	0	4	21	27	22	PassiveViewing							
+26	0	13.33333333	51.66666667	Sham	Slow	22	4	4	4	19	PassiveViewing							
+27	1.666666667	56.83333333	57.33333333	Active	Control	26	10	10	16	18	PassiveViewing							
+28	12.66666667	30	47.83333333	Sham	Control	27	10	14	23	14	PassiveViewing							
+29	13.33333333	27.5	40.83333333	Active	Slow	21	9	10	8	19	PassiveViewing							
+30	5.833333333	52.66666667	93	Sham	Slow	11	4	12	8	25	PassiveViewing							
+31	7	9.166666667	55.5	Active	Control	16	13	10	10	13	PassiveViewing							
+32	21.66666667	40	48.83333333	Sham	Control	15	9	20	21	19	PassiveViewing							
+33	8.833333333	9.833333333	45	Active	Slow	25	4	9	18	24	PassiveViewing							
+34	50.83333333	74.5	76.33333333	Sham	Slow	32	7	17	19	23	PassiveViewing							
+35	70.16666667	25.66666667	20	Active	Control	28	11	8	21	8	PassiveViewing							
+36	33.33333333	86.66666667	56.16666667	Sham	Control	3	7	5	5	24	PassiveViewing							
+37	14.66666667	51	77	Active	Slow	5	6	22	20	23	PassiveViewing							
+38	24.33333333	68.16666667	62	Sham	Slow	7	8	11	24	17	PassiveViewing							
+39	2.166666667	33.5	49	Active	Control	10	11	11	18	14	PassiveViewing							
+40	29.16666667	31.66666667	56.66666667	Sham	Control	37	5	14	14	21	PassiveViewing							
+41	15.66666667	69.66666667	76.83333333	Active	Slow	39	13	12	18	18	PassiveViewing							
+42	45.16666667	5.333333333	33.16666667	Sham	Slow	35	10	10	20	18	PassiveViewing							
+43	40.66666667	38.66666667	39.16666667	Active	Control	38	8	14	12	19	PassiveViewing							
+44	30.33333333	43.66666667	58.33333333	Sham	Control	14	12	20	20	9	PassiveViewing							
+45	0	51.66666667	71.66666667	Active	Slow	11	4	4	13	28	PassiveViewing							
+46	8.333333333	63	60.66666667	Sham	Slow	5	4	12	12	25	PassiveViewing							
+47	7.666666667	65.33333333	70.33333333	Active	Control	4	4	16	4	10	PassiveViewing							
+48	5.666666667	33.16666667	58	Sham	Control	26	10	22	20	14	PassiveViewing							
+49	16.66666667	55	68.33333333	Active	Slow	24	18	22	24	21	PassiveViewing							
+50	0	70	75	Sham	Slow	5	4	27	28	18	PassiveViewing							
+51	76	13.5	22.66666667	Active	Control	36	17	13	12	19	PassiveViewing							
+52	28.83333333	41.66666667	67.5	Sham	Control	17	4	8	13	14	PassiveViewing							
+53	3.333333333	8.333333333	50	Active	Slow	12	4	7	13	16	PassiveViewing							
+54	2.166666667	62.66666667	70	Sham	Slow	9	8	11	9	22	PassiveViewing							
+55	2.5	61.66666667	82	Active	Control	11	4	22	16	24	PassiveViewing							
+56	0	65	78.33333333	Sham	Control	10	4	20	18	24	PassiveViewing							
+57	42	0	30	Active	Slow	0	4	14	28	20	PassiveViewing							
+58	8.5	6.833333333	50	Sham	Slow	3	5	4	4	22	PassiveViewing							
+60	6.666666667	15	50	Sham	Control	1	4	13	11	27	PassiveViewing							
+61	0	71.5	75.66666667	Active	Slow	7	4	28	28	14	PassiveViewing							
+62	6.166666667	54.33333333	66.83333333	Sham	Slow	4	4	11	6	16	PassiveViewing							
+63	28.83333333	39.66666667	32.66666667	Active	Control	32	10	15	11	20	PassiveViewing							
+64	5	58.5	67.5	Sham	Control	10	4	16	13	24	PassiveViewing							
+65	15.16666667	15	5	Active	Slow	0	4	7	7	16	PassiveViewing							
+66	1.666666667	71.66666667	78.33333333	Sham	Slow	4	4	6	11	25	PassiveViewing							
+67	0	27	57.33333333	Active	Control	20	11	22	10	22	PassiveViewing							
+68	13	26.66666667	69.5	Sham	Control	15	5	10	16	22	PassiveViewing							
+69	78.33333333	0	0	Active	Slow	57	27	11	14	13	PassiveViewing							
+70	3.333333333	37.5	44	Sham	Slow	27	4	24	24	19	PassiveViewing							
+71	8.666666667	71.66666667	71	Active	Control	23	4	10	10	17	PassiveViewing							
+72	0.333333333	33.16666667	32.33333333	Sham	Control	0	4	4	4	4	PassiveViewing							
+73	11.66666667	30	20	Active	Slow	32	13	23	20	22	PassiveViewing							
+74	3.833333333	59.33333333	59.33333333	Sham	Slow	20	5	7	4	26	PassiveViewing							
+75	1.666666667	48.16666667	64.5	Active	Control	18	7	26	26	8	PassiveViewing							
+76	0	25.16666667	75.33333333	Sham	Control	40	12	21	19	23	PassiveViewing							
+77	10.16666667	90	88.5	Active	Slow	14	4	24	18	24	PassiveViewing							
+78	26.33333333	45.66666667	47.5	Sham	Slow	30	4	9	9	23	PassiveViewing							
+79	14.66666667	66	59	Active	Control	29	9	20	21	19	PassiveViewing							
+80	0.333333333	59.5	72	Sham	Control	3	5	15	14	23	PassiveViewing							
+81	13.16666667	22.83333333	58.5	Active	Slow	15	7	14	16	22	PassiveViewing							
+82	30	50.33333333	43.5	Sham	Slow	32	10	15	9	17	PassiveViewing							
+83	15.5	38.16666667	57.16666667	Active	Control	12	13	10	24	13	PassiveViewing							
+84	71	41.5	31.16666667	Sham	Control	30	11	10	16	17	PassiveViewing							
+85	22.83333333	49.83333333	49.5	Active	Slow	35	11	18	22	11	PassiveViewing							
+86	0	77.33333333	79.33333333	Sham	Slow	8	4	8	8	21	PassiveViewing							
+87	54.16666667	47.83333333	52	Active	Control	38	12	12	13	17	PassiveViewing							
+88	0	55.33333333	84	Sham	Control	19	5	15	10	21	PassiveViewing							
+89	46.16666667	31	45.66666667	Active	Slow	51	16	22	23	22	PassiveViewing							
+90	0	3.666666667	78.66666667	Sham	Slow	10	4	10	8	20	PassiveViewing							
+91	60.16666667	20	21.5	Active	Control	12	8	11	12	12	PassiveViewing							
+92	9.666666667	64.83333333	68	Sham	Control	39	13	22	24	21	PassiveViewing							
+93	5.666666667	26.5	48.83333333	Active	Slow	14	5	9	10	20	PassiveViewing							
+94	1.166666667	66.5	65.16666667	Sham	Slow	11	4	11	9	21	PassiveViewing							
+95	0	81	85.33333333	Active	Control	8	6	12	13	20	PassiveViewing							
+96	32	42.33333333	62.83333333	Sham	Control	1	4	15	25	14	PassiveViewing							
+97	21.5	75.66666667	68.16666667	Active	Slow	40	8	17	17	18	PassiveViewing							
+98	33.33333333	46.83333333	53.33333333	Sham	Slow	17	4	7	7	24	PassiveViewing							
+99	0	91.66666667	100	Active	Control	4	4	16	12	26	PassiveViewing							
+100	45	8.333333333	18.33333333	Sham	Control	41	17	19	19	14	PassiveViewing							
+101	7.833333333	40.16666667	79.5	Active	Slow	18	6	6	19	24	PassiveViewing							
+102	41.16666667	60.16666667	68.66666667	Sham	Slow	18	4	20	20	16	PassiveViewing							
+103	16.66666667	20	55.5	Active	Control	0	4	21	24	28	PassiveViewing							
+104	31.66666667	34.66666667	27.5	Sham	Control	27	4	17	14	11	PassiveViewing							
+105	6.333333333	64.33333333	86	Active	Slow	18	9	18	11	24	PassiveViewing							
+106	48.83333333	44.33333333	53.83333333	Sham	Slow	36	16	17	20	21	PassiveViewing							
+107	22.16666667	55.33333333	51.33333333	Active	Control	18	14	9	24	10	PassiveViewing							
+108	20	47.83333333	63.66666667	Sham	Control	8	4	5	21	18	PassiveViewing							
+109	48.66666667	26.5	23.33333333	Active	Slow	13	7	8	25	7	PassiveViewing							
+110	26.33333333	68.16666667	75	Sham 	Slow	44	16	19	26	18	PassiveViewing							
+111	0.833333333	88.16666667	90.66666667	Active	Control	14	4	20	19	23	PassiveViewing							
+112	9.166666667	59.33333333	68.5	Sham	Control	37	24	6	9	10	PassiveViewing							
+114	50.66666667	59.16666667	63.33333333	Sham	Slow	39	11	11	9	24	PassiveViewing							
+115	0	89.83333333	98.16666667	Active	Control	10	4	20	4	19	PassiveViewing							
+116	12.33333333	67.5	75.5	Sham	Control	19	8	20	16	16	PassiveViewing							
+117	13.16666667	11.16666667	53.66666667	Active 	Slow	29	9	14	19	18	PassiveViewing							
+118	8.5	71.66666667	76.5	Sham	Slow	25	5	10	20	21	PassiveViewing							
+119	1.666666667	78.33333333	90	Active	Control	1	4	11	9	24	PassiveViewing							
+120	9	63.33333333	71.33333333	Sham	Control	16	4	20	17	28	PassiveViewing							
+121	6.666666667	70	74.83333333	Active	Slow	0	4	22	28	28	PassiveViewing							
+122	8.666666667	44.16666667	50.83333333	Sham	Slow	11	4	19	16	6	PassiveViewing							
+123	20	38.5	35	Active	Control	20	10	10	21	20	PassiveViewing							
+124	0	46.83333333	66	Sham	Control	0	4	4	4	4	PassiveViewing							
+125	17.33333333	4.666666667	61.33333333	Active	Slow	33	18	10	25	9	PassiveViewing							
+126	18.33333333	59.33333333	84.83333333	Sham	Slow	6	4	21	24	18	PassiveViewing							
+127	15	60	75	Active	Control	0	4	24	9	24	PassiveViewing							
+128	35	50	48.33333333	Sham	Control	26	11	7	16	17	PassiveViewing							
+129	60.5	19.33333333	17	Active	Slow	25	8	11	16	13	PassiveViewing							
+130	0	73.33333333	73.33333333	Sham	Slow	0	4	28	28	16	PassiveViewing							
+131	1.166666667	69.33333333	71.83333333	Active	Control	1	8	22	23	20	PassiveViewing							
+132	10	62.5	78.33333333	Sham	Control	20	14	21	22	22	PassiveViewing							
+133	21	33.33333333	30.5	Active	Slow	8	8	9	20	18	PassiveViewing							
+134	74	69.5	61	Sham	Slow	24	8	20	26	8	PassiveViewing							
+135	32.5	41.33333333	50.33333333	Active	Control	17	10	15	16	19	PassiveViewing							
+136	6.666666667	58.83333333	61	Sham	Control	14	18	22	23	24	PassiveViewing							
+137	50	69.83333333	51.5	Active	Slow	31	16	20	16	20	PassiveViewing							
+138	59.66666667	44.16666667	40.5	Sham	Slow	31	11	17	19	16	PassiveViewing							
+139	0	83.33333333	90	Active	Control	24	8	23	13	23	PassiveViewing							
+140	0	75	86.66666667	Sham	Control	27	5	19	18	21	PassiveViewing							
+141	1	45.83333333	58.33333333	Active	Slow	17	11	19	12	16	PassiveViewing							
+142	28.66666667	57.5	47	Sham	Slow	18	6	24	24	24	PassiveViewing							
+143	7.666666667	46.83333333	35.5	Active	Control	22	12	12	16	18	PassiveViewing							
+144	0.666666667	39.83333333	56.66666667	Sham	Control	18	11	21	10	18	PassiveViewing							
+145	57.83333333	31.5	41	Active	Slow	25	10	20	23	13	PassiveViewing							
+146	63.16666667	35.83333333	48	Sham	Slow	42	9	15	20	20	PassiveViewing							
+147	0	59.83333333	89.83333333	Sham	Control	8	4	12	7	24	PassiveViewing							
+148	6.833333333	0	5	Sham	Control	0	4	4	8	13	PassiveViewing							
+149	0	78.33333333	78	Active	Slow	14	13	17	18	13	PassiveViewing							
+150	0	78.83333333	88.33333333	Sham	Slow	9	4	20	16	28	PassiveViewing							
+151	16.66666667	65	78.33333333	Active	Control	26	8	11	14	23	PassiveViewing							
+152	59.66666667	27.83333333	42.16666667	Sham	Control	8	7	8	16	20	PassiveViewing							
+153	14	31.83333333	39.5	Active	Slow	6	4	4	19	16	PassiveViewing							
+154	42.66666667	61.66666667	59.66666667	Sham	Slow	5	7	10	11	20	PassiveViewing							
+155	67.66666667	16.66666667	2.333333333	Active	Control	39	15	9	10	12	PassiveViewing							
+156	13.33333333	28.33333333	28.33333333	Sham	Control	30	16	7	22	10	PassiveViewing							
+157	30	35	51.16666667	Active	Slow	13	4	9	9	13	PassiveViewing							
+158	48.33333333	30	35	Sham	Slow	37	5	8	14	24	PassiveViewing							
+159	19.83333333	4.833333333	24.83333333	Active	Control	43	12	6	12	24	PassiveViewing							
+160	4.833333333	68.83333333	58.16666667	Sham	Control	39	18	5	18	24	PassiveViewing							
+161	15.66666667	32.5	64.33333333	Active	Slow	13	5	7	9	24	PassiveViewing							
+162	0	78.33333333	90.16666667	Sham	Slow	4	6	18	17	20	PassiveViewing							
+164	53.16666667	46.83333333	39.66666667	Sham	Control	40	12	15	19	13	PassiveViewing							
+165	28.33333333	63.33333333	33.33333333	Active	Control	33	4	10	10	22	PassiveViewing							
+166	0	33.33333333	75	Sham	Slow	3	4	15	6	28	PassiveViewing							
+167	0	63.5	81.16666667	Active	Control	0	4	23	11	28	PassiveViewing							
+168	10.16666667	33.66666667	63.16666667	Sham	Control	0	4	9	11	20	PassiveViewing							
+169	31.66666667	14.66666667	60.16666667	Active	Slow	30	10	8	17	20	PassiveViewing							
+170	27.83333333	32.16666667	43	Sham 	Slow	17	9	13	13	14	PassiveViewing							
+171	0	56.66666667	49.16666667	Active	Control	29	7	8	9	24	PassiveViewing							
+172	28.5	55	57.83333333	Sham	Control	42	8	16	13	19	PassiveViewing							
+173	6.166666667	78.16666667	76.16666667	Active	Slow	44	12	11	20	13	PassiveViewing							
+174	40	53.33333333	53.5	Active	Control	22	6	18	13	24	PassiveViewing							
+175	56.16666667	39.33333333	55.5	Active	Slow	32	5	19	12	20	PassiveViewing							
+176	8.333333333	51.83333333	65	Sham	Control	7	4	16	7	16	PassiveViewing							
+177	51.66666667	38.16666667	49	Active	Slow	27	12	7	24	7	PassiveViewing							
+178	8.833333333	18.33333333	28.33333333	Sham	Slow	24	6	17	20	17	PassiveViewing							
+179	23.5	66	66.66666667	Active	Control	20	9	22	16	23	PassiveViewing							
+180	40.33333333	43.83333333	53.66666667	Sham	Control	36	7	10	5	21	PassiveViewing							
+181	0	30.16666667	60.5	Active	Slow	22	9	23	23	20	PassiveViewing							
+182	40	33.33333333	41	Sham	Slow	14	6	13	23	15	PassiveViewing							
+183	0	82.16666667	92.33333333	Active	Control	9	20	21	23	22	PassiveViewing							
+184	13.33333333	16.66666667	24.83333333	Sham	Control	16	8	8	8	22	PassiveViewing							
+185	40.83333333	23	18.33333333	Active	Slow	25	6	9	18	21	PassiveViewing							
+186	8.333333333	68.33333333	73.33333333	Sham	Slow	5	4	13	12	14	PassiveViewing							
+187	26.66666667	46.66666667	70	Active	Control	7	4	17	28	23	PassiveViewing							
+188	58.33333333	31.33333333	31.33333333	Sham	Control	7	4	7	9	24	PassiveViewing							
+189	10.33333333	23.16666667	65	Active	Slow	10	4	10	6	17	PassiveViewing							
+190	15	46.5	50.16666667	Sham	Slow	31	5	14	17	19	PassiveViewing							
+191	2.666666667	74.5	79.16666667	Active	Control	25	4	16	21	21	PassiveViewing							
+192	28.33333333	48.33333333	45	Sham	Control	14	5	5	17	11	PassiveViewing							
+193	54.33333333	49.5	41.33333333	Active	Slow	47	21	13	20	16	PassiveViewing							
+194	48.33333333	40	45	Sham	Slow	29	10	14	23	17	PassiveViewing							
+195	43.5	11.16666667	29	Active	Control	13	4	4	4	28	PassiveViewing							
+196	0	1	62.33333333	Sham	Control	13	8	16	9	19	PassiveViewing							
+197	51.16666667	70.33333333	59.66666667	Active	Slow	17	13	16	17	18	PassiveViewing							
+198	2.166666667	90.33333333	91	Sham	Slow	6	6	20	24	24	PassiveViewing							
+199	5	74.33333333	87	Active	Control	42	5	8	12	28	PassiveViewing							
+200	13.33333333	51.66666667	78.33333333	Sham	Slow	27	17	21	21	23	PassiveViewing							

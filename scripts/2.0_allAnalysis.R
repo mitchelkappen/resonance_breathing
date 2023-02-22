@@ -90,7 +90,8 @@ allData$Phase <- ordered(allData$Phase, levels = c("Habituation", "Breathing", "
 # To decide; include tDCS or take out completely?
 # Include or exclude the baseline/Habituation
 backupData = allData
-allData = allData[allData$Phase != "Habituation", ]
+# allData = allData[allData$Phase != "Habituation", ]
+allData = allData[allData$tDCSGroup == "Sham", ]
 
 ####### Acoustic Speech features #######
 # Acoustic Speech features: F0 ######
@@ -284,13 +285,13 @@ figure = addpvaluesBetween(figure, emmeans0.2)
 savePlot(figure, "VoicedSegmentsPerSec") # Display and save plot
 figureVoicedSegments = figure
 
-# Sentiment Speech features: Combine plots #######
+# Acoustic Speech features: Combine plots #######
 figure <- ggarrange(figureF0, figureJitter, figureShimmer, 
                     figureHNR, figureMeanSegLength, figureVoicedSegments, 
                     labels = c("A", "B", "C", "D", "E", "F"),
                     ncol = 2, nrow = 3,
                     common.legend = TRUE, legend="bottom")
-savePlot(figure, "CombinedAcoustic", widthval = 6000, heightval = 1900) # Display and save plot
+savePlot(figure, "CombinedAcoustic", widthval = 3500, heightval = 3500) # Display and save plot
 
 ####### Sentiment Speech features #######
 # Sentiment Speech features: Valence ######
@@ -556,7 +557,7 @@ figure <- ggarrange(figureValence, figureArousal, figureDominance, figureJoy,
                     labels = c("A", "B", "C", "D", "E", "F", "G", "H"),
                     ncol = 2, nrow = 4,
                     common.legend = TRUE, legend="bottom")
-savePlot(figure, "CombinedSentiment", widthval = 8000, heightval = 1900) # Display and save plot
+savePlot(figure, "CombinedSentiment", widthval = 3500, heightval = 5000) # Display and save plot
 
 ####### Behavioral #######
 # Behavioral: NegativeAffect ######
@@ -631,8 +632,8 @@ dataModel = allData # Ensure correct data is taken
 rm(d0.1, d0.2, d0.3, tabel, chosenModel, emmeans0.1, emmeans0.2, emm0.1, figure) # Just to be sure you're not comparing former models for this comparison
 
 d0.1 <- lmer(formula,data=dataModel)
-d0.2 <- glmer(formula,data=dataModel, family = Gamma(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
-d0.3 <- glmer(formula,data=dataModel, family = inverse.gaussian(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
+# d0.2 <- glmer(formula,data=dataModel, family = Gamma(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
+# d0.3 <- glmer(formula,data=dataModel, family = inverse.gaussian(link = "identity"),glmerControl(optimizer= "bobyqa", optCtrl = list(maxfun = 100000)),nAGQ = nAGQ)
 
 # Model Selection
 modelNames = c(d0.1)
@@ -661,7 +662,7 @@ figure <- ggarrange(figureNegAffect, figureActivatingPositiveAffect, figureSooth
                     labels = c("A", "B", "C"),
                     ncol = 2, nrow = 2,
                     common.legend = TRUE, legend="bottom")
-savePlot(figure, "CombinedSelfReports", widthval = 5000, heightval = 1900) # Display and save plot
+savePlot(figure, "CombinedSelfReports", widthval = 3500, heightval = 2000) # Display and save plot
 
 
 

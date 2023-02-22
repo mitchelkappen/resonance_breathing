@@ -76,7 +76,7 @@ addpvalues <-
   function(gplot, emmean){
     means = summary(emmean$emmeans) # Set up emmeans variable
     contrasts = summary(emmean$contrasts) # Set up contrast variable
-    
+    ylocTaken = 0 # This is a very hacky way so the time 1vs3 dont overlap
     numberofsigs = sum(contrasts$p.value < 0.05)
     for(i in 0:numberofsigs){ # Loop over number of significant contrasts
       if(i > 0){ # Only do stuff if significance present | Yes, this is hacky
@@ -107,8 +107,27 @@ addpvalues <-
           color = cbPalette[2]
         }
         
+        if(dim(means)[1] == 4){
+          gplot = gplot + annotate(geom="text", x= 1.5, y=emmeanloc + stdev/7, label=significance, color=color, size = 10) # Add the annotation line to the ggplot
+        }else if(dim(means)[1] == 6){
+          if(str == "Habituation - Breathing"){ # Contrast can be made there -> x = 1.5
+            gplot = gplot + annotate(geom="text", x= 1.5, y=emmeanloc + stdev/7, label=significance, color=color, size = 10) # Add the annotation line to the ggplot
+          }else if(str == "Breathing - Calculus"){ # Contrast can be made there -> x = 2.5
+            gplot = gplot + annotate(geom="text", x= 2.5, y=emmeanloc + stdev/7, label=significance, color=color, size = 10) # Add the annotation line to the ggplot
+          }else if(str == "Habituation - Calculus"){ # Contarst between x=1 and x=2, add in the middle, put a little higher
+            yloc = max(means$emmean[means$Phase == "Breathing"]) # Check for highest y axis for middle category here | add 5% in next line
+            if(ylocTaken == 0){
+              gplot = gplot + annotate(geom="text", x= 2, y=yloc + yloc/20, label=significance, color=color, size = 10) # Add the annotation line to the ggplot
+              ylocTaken = 1
+            }else if(ylocTaken == 1){
+              gplot = gplot + annotate(geom="text", x= 2, y=yloc + yloc/30, label=significance, color=color, size = 10) # Add the annotation line to the ggplot
+            }
+            
+          }
+        }else{
+          print("Not adding significances, because dimensions are off")
+        }
         # Add significance to plot and return plot
-        gplot = gplot + annotate(geom="text", x= 1.5, y=emmeanloc + stdev/7, label=significance, color=color, size = 10) # Add the annotation line to the ggplot
         
       }
       

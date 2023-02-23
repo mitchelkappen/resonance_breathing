@@ -92,6 +92,7 @@ allData$Phase <- ordered(allData$Phase, levels = c("Habituation", "Breathing", "
 backupData = allData
 # allData = allData[allData$Phase != "Habituation", ]
 allData = allData[allData$tDCSGroup == "Sham", ]
+allData = allData[allData$Breathing_Condition == "Control", ]
 
 ####### Acoustic Speech features #######
 # Acoustic Speech features: F0 ######
